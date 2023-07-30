@@ -2,11 +2,11 @@ package com.ahmed.bankapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.data.Constants.loginData
 import com.ahmed.bankapp.data.Permissions
 import com.ahmed.bankapp.databinding.ActivityMainBinding
+import com.ahmed.bankapp.ui.home.CurrencyExchangeActivity
 import com.ahmed.bankapp.ui.home.LoginLogActivity
 import com.ahmed.bankapp.ui.home.ManageClientsActivity
 import com.ahmed.bankapp.ui.home.ManageUsersActivity
@@ -56,6 +56,10 @@ class MainActivity : AppCompatActivity() {
                     loginData.checkPermission(Permissions.REGISTER_LOGIN.value)
                 if (permissionStatus) openActivity(LoginLogActivity::class.java)
                 else toast("Access Denied")
+            }
+
+            cvCurrencyExchange.click {
+                openActivity(CurrencyExchangeActivity::class.java)
             }
 
             cvLogout.click {

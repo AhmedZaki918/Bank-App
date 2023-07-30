@@ -13,120 +13,123 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            android:name=".ui.home.CurrencyExchangeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.ManageClientsActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.transactions.TransferLogActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.transactions.TransferActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.transactions.BalancesActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.home.TransactionsActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.home.LoginLogActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.MainActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.user.FindUserActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.user.UpdateUserActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.user.DeleteUserActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.user.UsersActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.user.AddUserActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.home.ManageUsersActivity"
-            android:exported="false" />
-        <activity
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.transactions.WithdrawActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:name=".ui.transactions.DepositActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:name=".ui.client.FindClientActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:name=".ui.client.UpdateClientActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:name=".ui.client.DeleteClientActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:name=".ui.client.AddClientActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

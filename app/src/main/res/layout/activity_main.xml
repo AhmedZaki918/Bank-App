@@ -254,4 +254,54 @@
         app:layout_constraintTop_toBottomOf="@+id/cv_manage_clients" />
 
 
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_currency_exchange"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toEndOf="@+id/cv_manage_clients"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transactions"
+        app:strokeColor="#343633"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/outline_currency_exchange" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        android:id="@+id/tv_currency_exchange"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Currency Exchange"
+        android:textColor="@color/offWhite"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/cv_currency_exchange"
+        app:layout_constraintStart_toStartOf="@+id/cv_currency_exchange"
+        app:layout_constraintTop_toBottomOf="@+id/cv_currency_exchange" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

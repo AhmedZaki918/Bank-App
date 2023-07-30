@@ -13,6 +13,7 @@ data class Currency(
         private fun getEmptyCurrency(): Currency {
             return Currency("", "", "", 0.0f)
         }
+
         private fun toUpperCase(word: String): String {
             var newWord = ""
 
@@ -50,7 +51,7 @@ data class Currency(
 
         fun findByCountry(country: String): Currency {
             for (x in currencies.indices) {
-                if (country == currencies[x].countryName) {
+                if (toUpperCase(country) == toUpperCase(currencies[x].countryName)) {
                     return Currency(
                         currencies[x].countryName,
                         currencies[x].currencyCode,
@@ -68,9 +69,9 @@ data class Currency(
     fun updateRate(
         currencyCode: String,
         rate: Float
-    ): String {
+    ): Currency {
         for (i in currencies.indices) {
-            if (currencyCode == currencies[i].currencyCode) {
+            if (toUpperCase(currencyCode) == currencies[i].currencyCode) {
                 currencies[i].apply {
                     val item = Currency(
                         countryName,
@@ -79,11 +80,11 @@ data class Currency(
                         rate
                     )
                     currencies.set(i, item)
+                    return item
                 }
-                break
             }
         }
-        return "Currency rate has been updated"
+        return getEmptyCurrency()
     }
 
     fun countryName(): String {
