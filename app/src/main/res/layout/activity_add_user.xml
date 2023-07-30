@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:fillViewport="true"
+    tools:context=".ui.user.AddUserActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <EditText
+            android:id="@+id/et_user_first_name"
+            style="@style/edit_text"
+            android:layout_marginTop="130dp"
+            android:drawableStart="@drawable/outline_person"
+            android:hint="First name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_user_last_name"
+            style="@style/edit_text"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/outline_person"
+            android:hint="Last name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_user_first_name" />
+
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/edit_text"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/outline_person_pin"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_user_last_name" />
+
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/edit_text"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/outline_lock"
+            android:hint="Password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+
+        <TextView
+            android:id="@+id/tv_permissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:alpha="0.9"
+            android:text="User Permissions"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/tv_permissions"
+            app:layout_constraintWidth_percent="0.5" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/show_clients_label"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintTop_toTopOf="@+id/show_clients_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/view15"
+            app:srcCompat="@drawable/baseline_person_outline"
+            app:tint="@color/offWhite" />
+
+
+        <TextView
+            android:id="@+id/show_clients_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Show clients"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_show"
+            app:layout_constraintTop_toBottomOf="@+id/show_clients_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/outline_person_add"
+            app:tint="@color/offWhite" />
+
+        <TextView
+            android:id="@+id/add_clients_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Add client"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/add_clients_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_show"
+            app:layout_constraintTop_toTopOf="@+id/add_clients_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_add"
+            app:layout_constraintTop_toBottomOf="@+id/add_clients_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:srcCompat="@drawable/outline_person_remove"
+            app:tint="@color/offWhite" />
+
+
+        <TextView
+            android:id="@+id/delete_clients_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Delete client"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/delete_clients_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_add"
+            app:layout_constraintTop_toTopOf="@+id/delete_clients_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:alpha="0.7"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password"
+            app:srcCompat="@drawable/outline_app_permission"
+            app:tint="@color/offWhite" />
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toBottomOf="@+id/delete_clients_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            app:srcCompat="@drawable/outline_edit_note"
+            app:tint="@color/offWhite" />
+
+
+        <TextView
+            android:id="@+id/update_client_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Update client"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintStart_toEndOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/update_client_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toTopOf="@+id/update_client_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toBottomOf="@+id/update_client_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/view4"
+            app:srcCompat="@drawable/outline_person_search"
+            app:tint="@color/offWhite" />
+
+
+        <TextView
+            android:id="@+id/search_client_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Search client"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/search_client_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toTopOf="@+id/search_client_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toBottomOf="@+id/search_client_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/view5"
+            app:srcCompat="@drawable/outline_transform"
+            app:tint="@color/offWhite" />
+
+        <TextView
+            android:id="@+id/transactions_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Transactions"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_transactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/transactions_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toTopOf="@+id/transactions_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toBottomOf="@+id/transactions_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/view6"
+            app:srcCompat="@drawable/outline_manage_accounts"
+            app:tint="@color/offWhite" />
+
+
+        <TextView
+            android:id="@+id/manage_accounts_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Manage accounts"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintStart_toEndOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_manage_accounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/manage_accounts_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toTopOf="@+id/manage_accounts_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.1"
+            android:background="@color/offWhite"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toBottomOf="@+id/manage_accounts_label"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/view7"
+            app:srcCompat="@drawable/outline_history"
+            app:tint="@color/offWhite" />
+
+
+        <TextView
+            android:id="@+id/login_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:alpha="0.5"
+            android:text="Login log"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="@+id/imageView17" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_login_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/login_log_label"
+            app:layout_constraintEnd_toEndOf="@+id/switch_delete"
+            app:layout_constraintTop_toTopOf="@+id/login_log_label"
+            app:thumbTint="@color/background"
+            tools:theme="@style/Theme.BankApp" />
+
+
+        <Button
+            android:id="@+id/btn_add_client"
+            style="@style/button"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="Add User"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_login_log" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

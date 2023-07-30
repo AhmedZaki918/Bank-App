@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.transactions.TransferActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header" />
+
+
+        <EditText
+            android:id="@+id/et_from_account"
+            style="@style/edit_text"
+            android:layout_marginTop="64dp"
+            android:drawableStart="@drawable/outline_format_indent_decrease"
+            android:hint="From account"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <EditText
+            android:id="@+id/et_to_account"
+            style="@style/edit_text"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/outline_format_indent_increase"
+            android:hint="To account"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_from_account" />
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/button"
+            android:layout_marginTop="8dp"
+            android:text="Submit"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_to_account" />
+
+
+        <TextView
+            android:id="@+id/fullname_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="128dp"
+            android:alpha="0.7"
+            android:text="Full name          :"
+            android:textColor="@color/offWhite"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toBottomOf="@+id/et_to_account"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/zeroWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/fullname_label"
+            app:layout_constraintStart_toEndOf="@+id/fullname_label"
+            app:layout_constraintTop_toTopOf="@+id/fullname_label"
+            tools:text="Ahmed Zaki"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/acc_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Acc. number     :"
+            android:textColor="@color/offWhite"
+            android:alpha="0.7"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/fullname_label"
+            app:layout_constraintTop_toBottomOf="@+id/fullname_label"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tv_acc_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/zeroWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/acc_number_label"
+            app:layout_constraintStart_toEndOf="@+id/acc_number_label"
+            app:layout_constraintTop_toTopOf="@+id/acc_number_label"
+            tools:text="105"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="From"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btn_submit"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fullname"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Balance             :"
+            android:textColor="@color/offWhite"
+            android:alpha="0.7"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/acc_number_label"
+            app:layout_constraintTop_toBottomOf="@+id/acc_number_label"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/zeroWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/balance_label"
+            app:layout_constraintStart_toEndOf="@+id/balance_label"
+            app:layout_constraintTop_toTopOf="@+id/balance_label"
+            tools:text="5000"
+            tools:visibility="visible" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:alpha="0.2"
+            android:background="@color/offWhite"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/imageView20"
+            app:layout_constraintTop_toBottomOf="@+id/tv_balance"
+            app:layout_constraintWidth_percent="0.6"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/to_fullname_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0.7"
+            android:text="Full name          :"
+            android:textColor="@color/offWhite"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/balance_label"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/to_tv_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/zeroWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/to_fullname_label"
+            app:layout_constraintStart_toEndOf="@+id/to_fullname_label"
+            app:layout_constraintTop_toTopOf="@+id/to_fullname_label"
+            tools:text="Adel Adham"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/to_acc_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Acc. number     :"
+            android:textColor="@color/offWhite"
+            android:alpha="0.7"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/to_fullname_label"
+            app:layout_constraintTop_toBottomOf="@+id/to_tv_fullname"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/to_tv_acc_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/zeroWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/to_acc_number_label"
+            app:layout_constraintStart_toEndOf="@+id/to_acc_number_label"
+            app:layout_constraintTop_toTopOf="@+id/to_acc_number_label"
+            tools:text="106"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/to_balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Balance             :"
+            android:textColor="@color/offWhite"
+            android:alpha="0.7"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/to_acc_number_label"
+            app:layout_constraintTop_toBottomOf="@+id/to_acc_number_label"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/to_tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/zeroWhite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/to_balance_label"
+            app:layout_constraintStart_toEndOf="@+id/to_balance_label"
+            app:layout_constraintTop_toTopOf="@+id/to_balance_label"
+            tools:text="7000"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="To"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/tv_from"
+            app:layout_constraintTop_toBottomOf="@+id/to_tv_fullname"
+            tools:visibility="visible" />
+
+
+        <EditText
+            android:id="@+id/et_transfer_amount"
+            style="@style/edit_text"
+            android:layout_marginTop="64dp"
+            android:hint="Amount"
+            android:inputType="number"
+            android:visibility="invisible"
+            android:drawableTint="@color/zeroWhite"
+            android:drawableStart="@drawable/outline_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/to_balance_label"
+            tools:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/btn_transfer"
+            style="@style/button"
+            android:layout_marginTop="8dp"
+            android:text="Transfer"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_transfer_amount"
+            tools:visibility="visible" />
+
+
+
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            app:tint="@color/offWhite"
+            android:alpha="0.8"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/btn_submit"
+            app:layout_constraintTop_toTopOf="@+id/fullname_label"
+            app:srcCompat="@drawable/outline_person" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            app:tint="@color/offWhite"
+            android:alpha="0.8"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/acc_number_label"
+            app:srcCompat="@drawable/outline_numbers" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:tint="@color/offWhite"
+            android:alpha="0.8"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/imageView19"
+            app:layout_constraintTop_toTopOf="@+id/balance_label"
+            app:srcCompat="@drawable/outline_account_balance" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:tint="@color/offWhite"
+            android:alpha="0.8"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/imageView20"
+            app:layout_constraintTop_toTopOf="@+id/to_fullname_label"
+            app:srcCompat="@drawable/outline_person" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            app:tint="@color/offWhite"
+            android:alpha="0.8"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/imageView21"
+            app:layout_constraintTop_toTopOf="@+id/to_acc_number_label"
+            app:srcCompat="@drawable/outline_numbers" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            app:tint="@color/offWhite"
+            android:alpha="0.8"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/imageView22"
+            app:layout_constraintTop_toTopOf="@+id/to_balance_label"
+            app:srcCompat="@drawable/outline_account_balance" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

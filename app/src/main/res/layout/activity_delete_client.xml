@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.client.DeleteClientActivity">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/button"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_account_number" />
+
+    <EditText
+        android:id="@+id/et_account_number"
+        style="@style/edit_text"
+        android:layout_marginTop="150dp"
+        android:drawableStart="@drawable/outline_numbers"
+        android:hint="Account number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:alpha="0.9"
+        android:text="Name"
+        android:textColor="@color/offWhite"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/iv_fullname"
+        app:layout_constraintTop_toBottomOf="@+id/btn_submit"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.9"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name_label"
+        app:layout_constraintStart_toStartOf="@+id/btn_submit"
+        app:layout_constraintTop_toTopOf="@+id/tv_name_label"
+        app:srcCompat="@drawable/outline_person"
+        app:tint="@color/offWhite"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:textColor="@color/offWhite"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_label"
+        tools:text="Ahmed Zaki" />
+
+
+    <ImageView
+        android:id="@+id/iv_pincode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.9"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pincode_label"
+        app:layout_constraintStart_toStartOf="@+id/iv_fullname"
+        app:layout_constraintTop_toTopOf="@+id/tv_pincode_label"
+        app:srcCompat="@drawable/outline_lock"
+        app:tint="@color/offWhite"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_pincode_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0.9"
+        android:text="Pin Code"
+        android:textColor="@color/offWhite"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/iv_pincode"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_pincode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:textColor="@color/offWhite"
+        app:layout_constraintStart_toStartOf="@+id/tv_pincode_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pincode_label"
+        tools:text="1234" />
+
+
+    <TextView
+        android:id="@+id/tv_acc_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0.9"
+        android:text="Account Number"
+        android:textColor="@color/offWhite"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/iv_acc_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pincode"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/iv_acc_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.9"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_acc_number_label"
+        app:layout_constraintStart_toStartOf="@+id/iv_pincode"
+        app:layout_constraintTop_toTopOf="@+id/tv_acc_number_label"
+        app:srcCompat="@drawable/outline_numbers"
+        app:tint="@color/offWhite"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_acc_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:textColor="@color/offWhite"
+        app:layout_constraintStart_toStartOf="@+id/tv_acc_number_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_acc_number_label"
+        tools:text="105" />
+
+
+    <ImageView
+        android:id="@+id/iv_acc_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.9"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_acc_balance_label"
+        app:layout_constraintStart_toStartOf="@+id/iv_acc_number"
+        app:layout_constraintTop_toTopOf="@+id/tv_acc_balance_label"
+        app:srcCompat="@drawable/outline_account_balance"
+        app:tint="@color/offWhite"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_acc_balance_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0.9"
+        android:text="Account Balance"
+        android:textColor="@color/offWhite"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/iv_acc_balance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_acc_number"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_acc_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:textColor="@color/offWhite"
+        app:layout_constraintStart_toStartOf="@+id/tv_acc_balance_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_acc_balance_label"
+        tools:text="5000" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        style="@style/button"
+        android:layout_marginTop="8dp"
+        android:text="Delete"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_account_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.client.UpdateClientActivity">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/button"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_account_number" />
+
+    <EditText
+        android:id="@+id/et_account_number"
+        style="@style/edit_text"
+        android:layout_marginTop="150dp"
+        android:drawableStart="@drawable/outline_numbers"
+        android:hint="Account number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_pin_code"
+        style="@style/edit_text"
+        android:layout_marginTop="150dp"
+        android:visibility="invisible"
+        android:drawableStart="@drawable/outline_lock"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1234" />
+
+
+    <EditText
+        android:id="@+id/et_first_name"
+        style="@style/edit_text"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/outline_person"
+        android:visibility="invisible"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pin_code"
+        tools:text="Ahmed" />
+
+
+    <EditText
+        android:id="@+id/et_lastName"
+        style="@style/edit_text"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/outline_person"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_first_name"
+        tools:text="Zaki" />
+
+
+    <EditText
+        android:id="@+id/et_account_balance"
+        style="@style/edit_text"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        android:drawableStart="@drawable/outline_account_balance"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_lastName"
+        tools:text="4000" />
+
+
+    <Button
+        android:id="@+id/btn_update"
+        style="@style/button"
+        android:layout_marginBottom="32dp"
+        android:text="Update"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

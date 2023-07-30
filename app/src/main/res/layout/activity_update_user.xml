@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.user.UpdateUserActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header" />
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/button"
+            android:layout_marginTop="8dp"
+            android:text="Submit"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/edit_text"
+            android:layout_marginTop="130dp"
+            android:drawableStart="@drawable/outline_person_pin"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/edit_text"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/outline_lock"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_username" />
+
+        <EditText
+            android:id="@+id/et_update_username"
+            style="@style/edit_text"
+            android:layout_marginTop="130dp"
+            android:drawableStart="@drawable/outline_person_pin"
+            android:inputType="textPersonName"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ahmed" />
+
+
+        <EditText
+            android:id="@+id/et_update_password"
+            style="@style/edit_text"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/outline_lock"
+            android:inputType="number"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_username"
+            tools:text="4421" />
+
+
+        <EditText
+            android:id="@+id/et_permissions"
+            style="@style/edit_text"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/outline_app_permission"
+            android:inputType="number"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_update_password"
+            tools:text="16" />
+
+
+        <EditText
+            android:id="@+id/et_first_name"
+            style="@style/edit_text"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/outline_person"
+            android:inputType="textPersonName"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_permissions"
+            tools:text="Ahmed" />
+
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/button"
+            android:layout_marginBottom="32dp"
+            android:text="Update"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
