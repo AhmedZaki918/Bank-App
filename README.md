@@ -3,6 +3,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Disclaimer](#disclaimer)
+* [Screenshots](#screenshots)
 * [Functionality](#functionality)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -15,6 +16,23 @@ Bank System App to manage all basics sections in any bank like users, clients, t
 ## Disclaimer
 
 This app has been implemented with multiple activity for simplicity purpose only, and this's [Not Best Pratice] by google, the right way you should do it, is to implement one single activity and multiple fragments.
+
+## Screenshots
+
+<img src="images/1-login.jpg" width="250"> <img src="images/2-home.jpg" width="250">
+<img src="images/3-manage users.jpg" width="250">
+<img src="images/4-transactions.jpg" width="250">
+<img src="images/5-currency exchange.jpg" width="250">
+<img src="images/6-total balances.jpg" width="250">
+<img src="images/7-transfer money.jpg" width="250">
+<img src="images/8-transfer log.jpg" width="250">
+<img src="images/9-add user.jpg" width="250">
+<img src="images/10-all clients.jpg" width="250">
+<img src="images/11-add user.jpg" width="250">
+<img src="images/12-deposit.jpg" width="250">
+<img src="images/13-all currencies.jpg" width="250">
+<img src="images/14-search currency.jpg" width="250">
+<img src="images/15-update exchange rate.jpg" width="250">
 
 ## Functionality
 
