@@ -2,7 +2,7 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Disclamer](#disclamer)
+* [Disclaimer](#disclaimer)
 * [Functionality](#functionality)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -12,7 +12,7 @@
 
 Bank System App to manage all basics sections in any bank like users, clients, transactions, user permissions and currency exchange  
 
-## Disclamer
+## Disclaimer
 
 This app has been implemented with multiple activity for simplicity purpose only, and this's [Not Best Pratice] by google, the right way you should do it, is to implement one single activity and multiple fragments.
 
