@@ -50,6 +50,9 @@ Bank System App to manage all basics sections in any bank like users, clients, t
   - Update exchange rate on currency
   - Currency caluclator 
 
+* Password encryption
+  - Encrypt password 
+  - Decrypt password
 
 ## Technologies
 
