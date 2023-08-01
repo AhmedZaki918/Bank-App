@@ -3,6 +3,7 @@ package com.ahmed.bankapp.ui.client
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityFindClientBinding
 import com.ahmed.bankapp.util.click
@@ -23,7 +24,7 @@ class FindClientActivity : AppCompatActivity() {
         binding = ActivityFindClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Find Client",this)
+        binding.header.drawScreenHeader(getString(R.string.find_client), this)
 
         // Create list of textview
         binding.apply {
@@ -64,6 +65,6 @@ class FindClientActivity : AppCompatActivity() {
                 tvName.text = fullName
                 tvAccBalance.text = client.accountBalance.toString()
             }
-        } else toast("Client with account number Not found!")
+        } else toast(getString(R.string.client_not_found))
     }
 }

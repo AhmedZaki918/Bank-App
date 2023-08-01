@@ -40,7 +40,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_manage_accounts" />
+                app:srcCompat="@drawable/outline_manage_accounts"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -74,7 +75,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_history" />
+                app:srcCompat="@drawable/outline_history"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -108,13 +110,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_transform" />
+                app:srcCompat="@drawable/outline_transform"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
-
 
 
     <TextView
@@ -123,7 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Manage Users"
+        android:text="@string/manage_users"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cv_manage_users"
@@ -137,7 +138,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Login Log"
+        android:text="@string/login_log"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cv_login_history"
@@ -150,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Transactions"
+        android:text="@string/transactions"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cv_transactions"
@@ -185,7 +186,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_logout" />
+                app:srcCompat="@drawable/outline_logout"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -197,7 +199,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Logout"
+        android:text="@string/logout"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cv_logout"
@@ -233,7 +235,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_manage_accounts" />
+                app:srcCompat="@drawable/outline_manage_accounts"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -246,13 +249,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Manage Clients"
+        android:text="@string/manage_clients"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cv_manage_clients"
         app:layout_constraintStart_toStartOf="@+id/cv_manage_clients"
         app:layout_constraintTop_toBottomOf="@+id/cv_manage_clients" />
-
 
 
     <com.google.android.material.card.MaterialCardView
@@ -283,7 +285,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_currency_exchange" />
+                app:srcCompat="@drawable/outline_currency_exchange"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -296,7 +299,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Currency Exchange"
+        android:text="@string/currency_exchange"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cv_currency_exchange"

@@ -14,7 +14,7 @@
         android:id="@+id/btn_submit"
         style="@style/button"
         android:layout_marginTop="8dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,11 +25,12 @@
         style="@style/edit_text"
         android:layout_marginTop="150dp"
         android:drawableStart="@drawable/outline_numbers"
-        android:hint="Account number"
+        android:hint="@string/account_number_lowercase"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -38,26 +39,25 @@
         android:layout_marginTop="150dp"
         android:drawableStart="@drawable/outline_money"
         android:drawableTint="@color/zeroWhite"
-        android:hint="Amount"
+        android:hint="@string/amount"
         android:inputType="number"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
 
     <Button
         android:id="@+id/btn_withdraw"
         style="@style/button"
-        android:visibility="invisible"
         android:layout_marginTop="8dp"
-        android:text="Withdraw"
+        android:text="@string/withdraw"
         android:textSize="16sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_account_number" />
-
 
 
     <TextView
@@ -67,7 +67,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="42dp"
         android:alpha="0.9"
-        android:text="Name"
+        android:text="@string/name"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"
@@ -86,6 +86,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_name_label"
         app:srcCompat="@drawable/outline_person"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
 
@@ -113,6 +114,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_pincode_label"
         app:srcCompat="@drawable/outline_lock"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
 
@@ -123,7 +125,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:alpha="0.9"
-        android:text="Pin Code"
+        android:text="@string/pin_code"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"
@@ -152,7 +154,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:alpha="0.9"
-        android:text="Account Number"
+        android:text="@string/account_number"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"
@@ -172,6 +174,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_acc_number_label"
         app:srcCompat="@drawable/outline_numbers"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
     <TextView
@@ -198,6 +201,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_acc_balance_label"
         app:srcCompat="@drawable/outline_account_balance"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
 
@@ -208,7 +212,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:alpha="0.9"
-        android:text="Account Balance"
+        android:text="@string/account_balance"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"

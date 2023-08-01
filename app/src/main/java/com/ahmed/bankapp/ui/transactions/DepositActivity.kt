@@ -5,6 +5,7 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityDepositBinding
 import com.ahmed.bankapp.util.click
@@ -27,7 +28,7 @@ class DepositActivity : AppCompatActivity() {
         binding = ActivityDepositBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Deposit", this)
+        binding.header.drawScreenHeader(getString(R.string.deposit), this)
 
         // Create list of textview
         binding.apply {
@@ -60,7 +61,7 @@ class DepositActivity : AppCompatActivity() {
             btnDeposit.click {
                 val amount = binding.etAccountBalance.text.toString().trim()
                 client!!.deposit(amount)
-                toast("Deposit has been accepted")
+                toast(getString(R.string.deposit_accepted))
                 finish()
             }
         }
@@ -85,6 +86,6 @@ class DepositActivity : AppCompatActivity() {
                 etAccountBalance.visibility = VISIBLE
                 btnSubmit.visibility = INVISIBLE
             }
-        } else toast("Client with account number Not found!")
+        } else toast(getString(R.string.client_not_found))
     }
 }

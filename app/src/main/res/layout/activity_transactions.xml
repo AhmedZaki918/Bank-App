@@ -44,14 +44,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_money" />
+                app:srcCompat="@drawable/outline_money"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_deposit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Deposit"
+                android:text="@string/deposit"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_deposit"
                 app:layout_constraintStart_toEndOf="@+id/iv_deposit"
@@ -95,14 +96,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_money" />
+                app:srcCompat="@drawable/outline_money"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_withdraw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Withdraw"
+                android:text="@string/withdraw"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_withdraw"
                 app:layout_constraintStart_toEndOf="@+id/iv_withdraw"
@@ -147,14 +149,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_balance" />
+                app:srcCompat="@drawable/outline_balance"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_total_balances"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Total Balances"
+                android:text="@string/total_balances"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_total_balances"
                 app:layout_constraintStart_toEndOf="@+id/iv_total_balances"
@@ -199,14 +202,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_history" />
+                app:srcCompat="@drawable/outline_history"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_transfer_log"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Transfer Log"
+                android:text="@string/transfer_log"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_transfer_log"
                 app:layout_constraintStart_toEndOf="@+id/iv_transfer_log"
@@ -251,14 +255,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_360" />
+                app:srcCompat="@drawable/outline_360"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_transfer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Transfer Money"
+                android:text="@string/transfer_money"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_transfer"
                 app:layout_constraintStart_toEndOf="@+id/iv_transfer"

@@ -19,11 +19,12 @@
         style="@style/edit_text"
         android:layout_marginTop="150dp"
         android:drawableStart="@drawable/outline_numbers"
-        android:hint="Account number"
+        android:hint="@string/account_number_lowercase"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -31,11 +32,12 @@
         style="@style/edit_text"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/outline_lock"
-        android:hint="Pin code"
+        android:hint="@string/pin_code_lowercase"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_account_number" />
+        app:layout_constraintTop_toBottomOf="@+id/et_account_number"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -43,22 +45,24 @@
         style="@style/edit_text"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/outline_person"
-        android:hint="First name"
+        android:hint="@string/first_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pincode" />
+        app:layout_constraintTop_toBottomOf="@+id/et_pincode"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/et_last_name"
         style="@style/edit_text"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/outline_person"
-        android:hint="Last name"
+        android:hint="@string/last_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_first_name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_first_name"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -66,22 +70,23 @@
         style="@style/edit_text"
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/outline_account_balance"
-        android:hint="Account balance"
+        android:hint="@string/account_balance_lowercase"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_last_name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_last_name"
+        tools:ignore="Autofill" />
 
 
     <Button
         android:id="@+id/btn_add_client"
         style="@style/button"
         android:layout_marginBottom="32dp"
-        android:text="Add Client"
+        android:text="@string/add_client"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/et_account_balance"
+        app:layout_constraintStart_toStartOf="@+id/et_account_balance" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

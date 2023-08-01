@@ -92,7 +92,7 @@ data class BankUser(
             password: String,
             permission: Int,
             firstName: String
-        ): String {
+        ): BankUser {
 
             for (i in users.indices) {
                 if (oldUsername == users[i].username && oldPassword == decryptText(users[i].password)) {
@@ -105,11 +105,11 @@ data class BankUser(
                             lastName
                         )
                         users.set(i, item)
+                        return item
                     }
-                    break
                 }
             }
-            return "User has been updated"
+            return getEmptyUser()
         }
 
         fun displayUsers(): ArrayList<BankUser> {
@@ -152,12 +152,5 @@ data class BankUser(
                 permissions
             )
         )
-    }
-
-    override fun toString(): String {
-        return "  Username    :    " + username + "\n" +
-                "  Password     :    " + password + "\n" +
-                "  Permissions :    " + permissions + "\n" +
-                "  Fullname      :    " + firstName + " " + lastName + "\n\n"
     }
 }

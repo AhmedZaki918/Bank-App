@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.transactions
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityTransferLogBinding
 import com.ahmed.bankapp.ui.adapter.TransferLogAdapter
@@ -20,7 +21,7 @@ class TransferLogActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Transfer Log (${BankClient.displayTransferLogs().size})",
+                "${getString(R.string.transfer_log)} (${BankClient.displayTransferLogs().size})",
                 this@TransferLogActivity
             )
             rvTransferLog.adapter = TransferLogAdapter(BankClient.displayTransferLogs())

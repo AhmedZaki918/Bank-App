@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:textSize="12sp"
-        android:text="User: "
+        android:text="@string/user"
         android:textColor="@color/offWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +52,7 @@
         android:textSize="12sp"
         android:layout_marginEnd="4dp"
         android:gravity="center"
-        android:text="Date: "
+        android:text="@string/date"
         android:textColor="@color/offWhite"
         app:layout_constraintEnd_toStartOf="@+id/tv_date_time"
         app:layout_constraintTop_toTopOf="parent" />
@@ -77,6 +77,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_screen_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_screen_name"
-        app:srcCompat="@drawable/outline_arrow_back" />
+        app:srcCompat="@drawable/outline_arrow_back"
+        android:contentDescription="@string/go_back_content_desc" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

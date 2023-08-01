@@ -22,29 +22,31 @@
             style="@style/edit_text"
             android:layout_marginTop="64dp"
             android:drawableStart="@drawable/outline_format_indent_decrease"
-            android:hint="From account"
+            android:hint="@string/from_account"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header" />
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/et_to_account"
             style="@style/edit_text"
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_format_indent_increase"
-            android:hint="To account"
+            android:hint="@string/to_account"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_from_account" />
+            app:layout_constraintTop_toBottomOf="@id/et_from_account"
+            tools:ignore="Autofill" />
 
 
         <Button
             android:id="@+id/btn_submit"
             style="@style/button"
             android:layout_marginTop="8dp"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +60,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="128dp"
             android:alpha="0.7"
-            android:text="Full name          :"
+            android:text="@string/full_name"
             android:textColor="@color/offWhite"
             android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/imageView18"
@@ -69,11 +71,10 @@
             android:id="@+id/tv_fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:textColor="@color/zeroWhite"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/fullname_label"
-            app:layout_constraintStart_toEndOf="@+id/fullname_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_acc_number"
             app:layout_constraintTop_toTopOf="@+id/fullname_label"
             tools:text="Ahmed Zaki"
             tools:visibility="visible" />
@@ -84,9 +85,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Acc. number     :"
-            android:textColor="@color/offWhite"
             android:alpha="0.7"
+            android:text="@string/acc_number"
+            android:textColor="@color/offWhite"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/fullname_label"
             app:layout_constraintTop_toBottomOf="@+id/fullname_label"
@@ -97,7 +98,7 @@
             android:id="@+id/tv_acc_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:textColor="@color/zeroWhite"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/acc_number_label"
@@ -112,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="From"
+            android:text="@string/from"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:visibility="invisible"
@@ -126,9 +127,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Balance             :"
-            android:textColor="@color/offWhite"
             android:alpha="0.7"
+            android:text="@string/balance"
+            android:textColor="@color/offWhite"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/acc_number_label"
             app:layout_constraintTop_toBottomOf="@+id/acc_number_label"
@@ -139,15 +140,14 @@
             android:id="@+id/tv_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:textColor="@color/zeroWhite"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/balance_label"
-            app:layout_constraintStart_toEndOf="@+id/balance_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_acc_number"
             app:layout_constraintTop_toTopOf="@+id/balance_label"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="5000"
             tools:visibility="visible" />
-
 
         <View
             android:id="@+id/view"
@@ -169,7 +169,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:alpha="0.7"
-            android:text="Full name          :"
+            android:text="@string/full_name"
             android:textColor="@color/offWhite"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/balance_label"
@@ -180,11 +180,10 @@
             android:id="@+id/to_tv_fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:textColor="@color/zeroWhite"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/to_fullname_label"
-            app:layout_constraintStart_toEndOf="@+id/to_fullname_label"
+            app:layout_constraintStart_toStartOf="@+id/to_tv_acc_number"
             app:layout_constraintTop_toTopOf="@+id/to_fullname_label"
             tools:text="Adel Adham"
             tools:visibility="visible" />
@@ -195,9 +194,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Acc. number     :"
-            android:textColor="@color/offWhite"
             android:alpha="0.7"
+            android:text="@string/acc_number"
+            android:textColor="@color/offWhite"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/to_fullname_label"
             app:layout_constraintTop_toBottomOf="@+id/to_tv_fullname"
@@ -207,7 +206,7 @@
             android:id="@+id/to_tv_acc_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:textColor="@color/zeroWhite"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/to_acc_number_label"
@@ -221,9 +220,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Balance             :"
-            android:textColor="@color/offWhite"
             android:alpha="0.7"
+            android:text="@string/balance"
+            android:textColor="@color/offWhite"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/to_acc_number_label"
             app:layout_constraintTop_toBottomOf="@+id/to_acc_number_label"
@@ -233,11 +232,10 @@
             android:id="@+id/to_tv_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:textColor="@color/zeroWhite"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/to_balance_label"
-            app:layout_constraintStart_toEndOf="@+id/to_balance_label"
+            app:layout_constraintStart_toStartOf="@+id/to_tv_acc_number"
             app:layout_constraintTop_toTopOf="@+id/to_balance_label"
             tools:text="7000"
             tools:visibility="visible" />
@@ -248,7 +246,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="To"
+            android:text="@string/to"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:visibility="invisible"
@@ -261,14 +259,15 @@
             android:id="@+id/et_transfer_amount"
             style="@style/edit_text"
             android:layout_marginTop="64dp"
-            android:hint="Amount"
+            android:drawableStart="@drawable/outline_money"
+            android:drawableTint="@color/zeroWhite"
+            android:hint="@string/amount"
             android:inputType="number"
             android:visibility="invisible"
-            android:drawableTint="@color/zeroWhite"
-            android:drawableStart="@drawable/outline_money"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/to_balance_label"
+            tools:ignore="Autofill"
             tools:visibility="visible" />
 
 
@@ -276,7 +275,7 @@
             android:id="@+id/btn_transfer"
             style="@style/button"
             android:layout_marginTop="8dp"
-            android:text="Transfer"
+            android:text="@string/transfer"
             android:textSize="16sp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
@@ -285,79 +284,83 @@
             tools:visibility="visible" />
 
 
-
-
         <ImageView
             android:id="@+id/imageView18"
             android:layout_width="wrap_content"
-            android:visibility="invisible"
-            app:tint="@color/offWhite"
-            android:alpha="0.8"
-            tools:visibility="visible"
             android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/btn_submit"
             app:layout_constraintTop_toTopOf="@+id/fullname_label"
-            app:srcCompat="@drawable/outline_person" />
+            app:srcCompat="@drawable/outline_person"
+            app:tint="@color/offWhite"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imageView19"
             android:layout_width="wrap_content"
-            android:visibility="invisible"
-            tools:visibility="visible"
             android:layout_height="wrap_content"
-            app:tint="@color/offWhite"
             android:alpha="0.8"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/imageView18"
             app:layout_constraintTop_toTopOf="@+id/acc_number_label"
-            app:srcCompat="@drawable/outline_numbers" />
+            app:srcCompat="@drawable/outline_numbers"
+            app:tint="@color/offWhite"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imageView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            app:tint="@color/offWhite"
             android:alpha="0.8"
-            tools:visibility="visible"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/imageView19"
             app:layout_constraintTop_toTopOf="@+id/balance_label"
-            app:srcCompat="@drawable/outline_account_balance" />
+            app:srcCompat="@drawable/outline_account_balance"
+            app:tint="@color/offWhite"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imageView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            app:tint="@color/offWhite"
             android:alpha="0.8"
-            tools:visibility="visible"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/imageView20"
             app:layout_constraintTop_toTopOf="@+id/to_fullname_label"
-            app:srcCompat="@drawable/outline_person" />
+            app:srcCompat="@drawable/outline_person"
+            app:tint="@color/offWhite"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imageView22"
             android:layout_width="wrap_content"
-            android:visibility="invisible"
-            app:tint="@color/offWhite"
-            android:alpha="0.8"
-            tools:visibility="visible"
             android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/imageView21"
             app:layout_constraintTop_toTopOf="@+id/to_acc_number_label"
-            app:srcCompat="@drawable/outline_numbers" />
+            app:srcCompat="@drawable/outline_numbers"
+            app:tint="@color/offWhite"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imageView23"
             android:layout_width="wrap_content"
-            android:visibility="invisible"
-            tools:visibility="visible"
-            app:tint="@color/offWhite"
-            android:alpha="0.8"
             android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/imageView22"
             app:layout_constraintTop_toTopOf="@+id/to_balance_label"
-            app:srcCompat="@drawable/outline_account_balance" />
+            app:srcCompat="@drawable/outline_account_balance"
+            app:tint="@color/offWhite"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

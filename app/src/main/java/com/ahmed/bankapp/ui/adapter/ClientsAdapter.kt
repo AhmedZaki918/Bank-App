@@ -35,7 +35,8 @@ class ClientsAdapter(
             binding.apply {
                 tvAccNumber.text = currentItem.accountNumber
                 tvPincode.text = currentItem.pinCode.toString()
-                tvFullname.text = currentItem.firstName + " " + currentItem.lastName
+                val fullName = currentItem.firstName + " " + currentItem.lastName
+                tvFullname.text = fullName
                 tvAccBalance.text = currentItem.accountBalance.toString()
             }
         }

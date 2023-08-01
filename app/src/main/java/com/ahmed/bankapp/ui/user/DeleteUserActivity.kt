@@ -5,6 +5,7 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.databinding.ActivityDeleteUserBinding
 import com.ahmed.bankapp.util.click
@@ -25,7 +26,7 @@ class DeleteUserActivity : AppCompatActivity() {
         binding = ActivityDeleteUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Delete User",this)
+        binding.header.drawScreenHeader(getString(R.string.delete_user),this)
 
         // Create list of textview
         binding.apply {
@@ -60,7 +61,7 @@ class DeleteUserActivity : AppCompatActivity() {
 
     private fun delete(user: BankUser) {
         user.deleteUser()
-        toast("User has been deleted")
+        toast(getString(R.string.user_deleted))
         finish()
     }
 
@@ -77,6 +78,6 @@ class DeleteUserActivity : AppCompatActivity() {
                 tvPermissions.text = user.permissions.toString()
                 btnDelete.visibility = VISIBLE
             }
-        } else toast("User with username Not found!")
+        } else toast(getString(R.string.user_not_found))
     }
 }

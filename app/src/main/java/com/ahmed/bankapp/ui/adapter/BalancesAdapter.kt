@@ -33,7 +33,8 @@ class BalancesAdapter(
 
         fun bind(currentItem: BankClient) {
             binding.apply {
-                tvFullname.text = currentItem.firstName + " " + currentItem.lastName
+                val fullName = currentItem.firstName + " " + currentItem.lastName
+                tvFullname.text = fullName
                 tvAccNumber.text = currentItem.accountNumber
                 tvBalance.text = currentItem.accountBalance.toString()
             }

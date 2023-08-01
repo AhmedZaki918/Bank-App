@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.databinding.ActivityUpdateUserBinding
 import com.ahmed.bankapp.util.changeToDefaultColor
@@ -25,7 +26,7 @@ class UpdateUserActivity : AppCompatActivity() {
         binding = ActivityUpdateUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Update User",this)
+        binding.header.drawScreenHeader(getString(R.string.update_user),this)
         clickListeners()
     }
 
@@ -44,17 +45,18 @@ class UpdateUserActivity : AppCompatActivity() {
 
     private fun updateUser(oldUsername: String, oldPassword: String) {
         binding.apply {
-            toast(
-                BankUser.updateUser(
-                    oldUsername,
-                    oldPassword,
-                    etUpdateUsername.text.toString().trim(),
-                    etUpdatePassword.text.toString().trim(),
-                    etPermissions.text.toString().toInt(),
-                    etFirstName.text.toString().trim()
-                )
+           val user = BankUser.updateUser(
+                oldUsername,
+                oldPassword,
+                etUpdateUsername.text.toString().trim(),
+                etUpdatePassword.text.toString().trim(),
+                etPermissions.text.toString().toInt(),
+                etFirstName.text.toString().trim()
             )
-            finish()
+            if (user.isUserExist()){
+                toast(getString(R.string.user_updated))
+                finish()
+            } else toast(getString(R.string.user_not_found))
         }
     }
 
@@ -73,7 +75,7 @@ class UpdateUserActivity : AppCompatActivity() {
                 etPermissions.changeToDefaultColor(applicationContext)
                 etFirstName.changeToDefaultColor(applicationContext)
             }
-        } else toast("Username Not found!")
+        } else toast(getString(R.string.username_not_found))
     }
 
 

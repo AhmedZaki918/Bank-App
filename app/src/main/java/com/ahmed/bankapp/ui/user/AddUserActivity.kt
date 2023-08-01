@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.user
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.data.Permissions
 import com.ahmed.bankapp.databinding.ActivityAddUserBinding
@@ -22,11 +23,10 @@ class AddUserActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.header.drawScreenHeader("Add User",this)
+        binding.header.drawScreenHeader(getString(R.string.add_user), this)
         readPermissions()
         binding.btnAddClient.click {
             addUser()
-            //clearScreen()
         }
     }
 
@@ -39,7 +39,7 @@ class AddUserActivity : AppCompatActivity() {
                 etUserFirstName.text.toString().trim(),
                 etUserLastName.text.toString().trim()
             )
-            toast("User has been added")
+            toast(getString(R.string.user_added))
             finish()
         }
     }

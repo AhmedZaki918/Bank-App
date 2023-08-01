@@ -3,8 +3,8 @@ package com.ahmed.bankapp.ui.user
 import android.os.Bundle
 import android.view.View
 import android.view.View.VISIBLE
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.databinding.ActivityFindUserBinding
 import com.ahmed.bankapp.util.click
@@ -24,7 +24,7 @@ class FindUserActivity : AppCompatActivity() {
         binding = ActivityFindUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Find User",this)
+        binding.header.drawScreenHeader(getString(R.string.find_user),this)
 
         // Create list of textview
         binding.apply {
@@ -58,6 +58,6 @@ class FindUserActivity : AppCompatActivity() {
                 tvPassword.text = user.password
                 tvPermissions.text = user.permissions.toString()
             }
-        } else toast("User with username Not found!")
+        } else toast(getString(R.string.user_not_found))
     }
 }

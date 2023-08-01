@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.Constants.loginData
 import com.ahmed.bankapp.data.Permissions
 import com.ahmed.bankapp.databinding.ActivityManageClientsBinding
@@ -27,27 +28,27 @@ class ManageClientsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Manage Clients", this@ManageClientsActivity)
+            header.drawScreenHeader(getString(R.string.manage_clients), this@ManageClientsActivity)
 
             cvAddClient.click {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.ADD_CLIENT.value)
                 if (permissionStatus) openActivity(AddClientActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
             }
 
             cvShowClients.click {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.GET_CLIENTS.value)
                 if (permissionStatus) openActivity(ClientsActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
             }
 
             cvDeleteClient.click {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.DELETE_CLIENT.value)
                 if (permissionStatus) openActivity(DeleteClientActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
             }
 
 
@@ -55,14 +56,14 @@ class ManageClientsActivity : AppCompatActivity() {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.UPDATE_CLIENT.value)
                 if (permissionStatus) openActivity(UpdateClientActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
             }
 
             cvFindClient.click {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.FIND_CLIENT.value)
                 if (permissionStatus) openActivity(FindClientActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
             }
         }
     }

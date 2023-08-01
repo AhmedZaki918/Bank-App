@@ -16,7 +16,7 @@
         android:id="@+id/btn_submit"
         style="@style/button"
         android:layout_marginTop="8dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +27,12 @@
         style="@style/edit_text"
         android:layout_marginTop="130dp"
         android:drawableStart="@drawable/outline_person_pin"
-        android:hint="Username"
+        android:hint="@string/username"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
 
     <TextView
@@ -41,7 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="42dp"
         android:alpha="0.9"
-        android:text="Username"
+        android:text="@string/username"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"
@@ -60,6 +61,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_username_label"
         app:srcCompat="@drawable/outline_person_pin"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
 
@@ -87,6 +89,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_password_label"
         app:srcCompat="@drawable/outline_lock"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
 
@@ -97,7 +100,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:alpha="0.9"
-        android:text="Password"
+        android:text="@string/password"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"
@@ -126,7 +129,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:alpha="0.9"
-        android:text="Permissions"
+        android:text="@string/permissions"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         android:visibility="invisible"
@@ -146,6 +149,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_permissions_label"
         app:srcCompat="@drawable/outline_app_permission"
         app:tint="@color/offWhite"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
     <TextView
@@ -165,7 +169,7 @@
         android:id="@+id/btn_delete"
         style="@style/button"
         android:layout_marginTop="8dp"
-        android:text="Delete"
+        android:text="@string/delete"
         android:textSize="16sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"

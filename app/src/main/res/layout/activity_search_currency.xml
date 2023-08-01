@@ -16,7 +16,7 @@
         android:id="@+id/btn_search"
         style="@style/button"
         android:layout_marginTop="8dp"
-        android:text="Search"
+        android:text="@string/search"
         android:textSize="16sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,14 +26,15 @@
     <EditText
         android:id="@+id/et_search"
         style="@style/edit_text"
-        android:drawableTint="@color/zeroWhite"
         android:layout_marginTop="150dp"
-        android:hint="Currency code"
+        android:drawableTint="@color/zeroWhite"
+        android:hint="@string/currency_code"
         android:inputType="text"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
 
     <ImageView
@@ -45,7 +46,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/outline_search"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
 
     <RadioGroup
@@ -64,7 +66,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.8"
             android:paddingStart="16dp"
-            android:text="Search by code"
+            android:paddingEnd="16dp"
+            android:text="@string/search_by_code"
             android:textColor="@color/offWhite" />
 
 
@@ -74,7 +77,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.8"
             android:paddingStart="16dp"
-            android:text="Search by country"
+            android:paddingEnd="16dp"
+            android:text="@string/search_by_country"
             android:textColor="@color/offWhite" />
 
 
@@ -85,7 +89,7 @@
         android:id="@+id/btn_submit"
         style="@style/button"
         android:layout_marginTop="24dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +106,8 @@
         app:layout_constraintStart_toStartOf="@+id/et_search"
         app:layout_constraintTop_toBottomOf="@+id/btn_search"
         app:srcCompat="@drawable/outline_place"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_country_label"
@@ -110,13 +115,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Country"
+        android:text="@string/country"
         android:textColor="@color/offWhite"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/iv_country"
         app:layout_constraintStart_toEndOf="@+id/iv_country"
-        app:layout_constraintTop_toTopOf="@+id/iv_country"
-        />
+        app:layout_constraintTop_toTopOf="@+id/iv_country" />
 
 
     <TextView
@@ -129,8 +133,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_country_label"
         app:layout_constraintStart_toEndOf="@+id/tv_country_label"
         app:layout_constraintTop_toTopOf="@+id/tv_country_label"
-        tools:text="Egypt"
-        />
+        tools:text="Egypt" />
 
 
     <ImageView
@@ -144,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@id/iv_country"
         app:srcCompat="@drawable/outline_code"
         app:tint="@color/offWhite"
-        />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_code_label"
@@ -152,13 +155,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Code"
+        android:text="@string/code"
         android:textColor="@color/offWhite"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/iv_code"
         app:layout_constraintStart_toEndOf="@+id/iv_code"
-        app:layout_constraintTop_toTopOf="@+id/iv_code"
-        />
+        app:layout_constraintTop_toTopOf="@+id/iv_code" />
 
 
     <TextView
@@ -170,8 +172,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_code_label"
         app:layout_constraintStart_toStartOf="@+id/tv_country"
         app:layout_constraintTop_toTopOf="@+id/tv_code_label"
-        tools:text="EGP"
-        />
+        tools:text="EGP" />
 
 
     <ImageView
@@ -185,7 +186,7 @@
         app:layout_constraintTop_toBottomOf="@id/iv_code"
         app:srcCompat="@drawable/outline_money_custom"
         app:tint="@color/offWhite"
-        />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_currency_label"
@@ -193,13 +194,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Currency"
+        android:text="@string/currency"
         android:textColor="@color/offWhite"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/iv_currency"
         app:layout_constraintStart_toEndOf="@+id/iv_currency"
-        app:layout_constraintTop_toTopOf="@+id/iv_currency"
-        />
+        app:layout_constraintTop_toTopOf="@+id/iv_currency" />
 
 
     <TextView
@@ -211,8 +211,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_currency_label"
         app:layout_constraintStart_toStartOf="@+id/tv_code"
         app:layout_constraintTop_toTopOf="@+id/tv_currency_label"
-        tools:text="Egyptian Pound"
-        />
+        tools:text="Egyptian Pound" />
 
 
     <ImageView
@@ -226,7 +225,7 @@
         app:layout_constraintTop_toBottomOf="@id/iv_currency"
         app:srcCompat="@drawable/outline_currency_exchange"
         app:tint="@color/offWhite"
-        />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_exchange_rate_label"
@@ -234,13 +233,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Rate(1$)"
+        android:text="@string/rate_1"
         android:textColor="@color/offWhite"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/iv_exchange_rate"
         app:layout_constraintStart_toEndOf="@+id/iv_exchange_rate"
-        app:layout_constraintTop_toTopOf="@+id/iv_exchange_rate"
-        />
+        app:layout_constraintTop_toTopOf="@+id/iv_exchange_rate" />
 
 
     <TextView
@@ -253,15 +251,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_rate_label"
         app:layout_constraintStart_toStartOf="@+id/tv_currency"
         app:layout_constraintTop_toTopOf="@+id/tv_exchange_rate_label"
-        tools:text="30.89"
-        />
+        tools:text="30.89" />
 
     <TextView
         android:id="@+id/tv_search_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Search mode"
+        android:text="@string/search_mode"
         android:textColor="@color/offWhite"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_search_mode"

@@ -1,3 +1,125 @@
 <resources>
     <string name="app_name">BankApp</string>
+    <string name="account_number_lowercase">Account number</string>
+    <string name="account_number">Account Number</string>
+    <string name="pin_code_lowercase">Pin code</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="account_balance_lowercase">Account balance</string>
+    <string name="account_balance">Account Balance</string>
+
+    <string name="add_client">Add Client</string>
+    <string name="client_has_been_added">Client has been added</string>
+    <string name="account_number_exists">Account number already exists</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="user_permissions">User Permissions</string>
+    <string name="show_clients_lowercase">Show clients</string>
+    <string name="show_clients">Show Clients</string>
+    <string name="add_client_lowercase">Add client</string>
+    <string name="delete_client_lowercase">Delete client</string>
+    <string name="update_client_lowercase">Update client</string>
+    <string name="search_client_lowercase">Search client</string>
+    <string name="transactions">Transactions</string>
+    <string name="manage_users_lowercase">Manage users</string>
+    <string name="login_log_lowercase">Login log</string>
+    <string name="add_user">Add User</string>
+    <string name="user_added">User has been added</string>
+
+    <string name="total_balances">Total Balances</string>
+    <string name="balances">Balances</string>
+    <string name="egp">EGP</string>
+    <string name="clients">Clients</string>
+
+    <string name="currencies">Currencies</string>
+    <string name="search_currency">Search Currency</string>
+    <string name="update_exchange_rate">Update Exchange Rate</string>
+    <string name="currency_calculator">Currency Calculator</string>
+    <string name="currency_exchange">Currency Exchange</string>
+
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+    <string name="delete">Delete</string>
+    <string name="delete_client">Delete Client</string>
+    <string name="client_deleted">Client has been deleted</string>
+    <string name="client_not_found">Client Not found!</string>
+
+    <string name="permissions">Permissions</string>
+    <string name="delete_user">Delete User</string>
+    <string name="user_deleted">User has been deleted</string>
+    <string name="user_not_found">User Not found!</string>
+
+    <string name="amount">Amount</string>
+    <string name="deposit">Deposit</string>
+    <string name="deposit_accepted">Deposit has been accepted</string>
+    <string name="find_client">Find Client</string>
+    <string name="find_user">Find User</string>
+
+    <string name="login">Login</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="bank">Bank</string>
+    <string name="invalid_data">Invalid data</string>
+    <string name="system_locked">System locked after 3 failed trails</string>
+
+    <string name="login_log">Login Log</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="logout">Logout</string>
+    <string name="manage_clients">Manage Clients</string>
+    <string name="home">Home</string>
+    <string name="access_denied">Access Denied</string>
+
+    <string name="update_client">Update Client</string>
+    <string name="show_users">Show Users</string>
+    <string name="update_user">Update User</string>
+
+    <string name="search">Search</string>
+    <string name="currency_code">Currency code</string>
+    <string name="search_by_code">Search by code</string>
+    <string name="search_by_country">Search by country</string>
+    <string name="country">Country</string>
+    <string name="code">Code</string>
+    <string name="currency">Currency</string>
+    <string name="rate_1">Rate(1$)</string>
+    <string name="search_mode">Search mode</string>
+    <string name="country_name">Country name</string>
+    <string name="invalid_currency_code">Invalid currency code</string>
+    <string name="invalid_country_name">Invalid country name</string>
+
+    <string name="withdraw">Withdraw</string>
+    <string name="transfer_log">Transfer Log</string>
+    <string name="transfer_money">Transfer Money</string>
+    <string name="from_account">From account</string>
+    <string name="to_account">To account</string>
+    <string name="full_name">Full name</string>
+    <string name="acc_number">Acc. number</string>
+    <string name="from">From</string>
+    <string name="balance">Balance</string>
+    <string name="to">To</string>
+    <string name="transfer">Transfer</string>
+    <string name="transfer_completed">Transfer has been completed</string>
+    <string name="transfer_failed">Transfer has been failed</string>
+
+    <string name="update">Update</string>
+    <string name="exchange_rate">Exchange rate</string>
+    <string name="update_rate">Update Rate</string>
+    <string name="exchange_rate_updated">Exchange rate has been updated</string>
+    <string name="username_not_found">Username Not found!</string>
+    <string name="users">Users</string>
+    <string name="withdraw_completed">Withdraw has been completed</string>
+    <string name="dont_have_enough_credit">You don\'t have enough credit!</string>
+    <string name="user">User:</string>
+    <string name="date">Date:</string>
+    <string name="go_back_content_desc">Go back</string>
+    <string name="date_time">Date / Time</string>
+    <string name="source_acc">Source acc</string>
+    <string name="destination_acc">Destination acc</string>
+    <string name="source_balance">Source balance</string>
+    <string name="dest_balance">Dest balance</string>
+    <string name="user_no_column">user</string>
+    <string name="user_updated">User has been updated</string>
+    <string name="client_updated">Client has been updated</string>
+
+
 </resources>

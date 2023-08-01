@@ -5,6 +5,7 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityDeleteClientBinding
 import com.ahmed.bankapp.util.click
@@ -26,7 +27,7 @@ class DeleteClientActivity : AppCompatActivity() {
         binding = ActivityDeleteClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Delete Client",this)
+        binding.header.drawScreenHeader(getString(R.string.delete_client),this)
 
         // Create list of textview
         binding.apply {
@@ -64,7 +65,7 @@ class DeleteClientActivity : AppCompatActivity() {
 
     private fun delete(client: BankClient) {
         client.deleteClient()
-        toast("Client has been deleted")
+        toast(getString(R.string.client_deleted))
         finish()
     }
 
@@ -85,6 +86,6 @@ class DeleteClientActivity : AppCompatActivity() {
                 tvAccBalance.text = client.accountBalance.toString()
                 btnDelete.visibility = VISIBLE
             }
-        } else toast("Client with account number Not found!")
+        } else toast(getString(R.string.client_not_found))
     }
 }

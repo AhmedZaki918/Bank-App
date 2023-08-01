@@ -23,7 +23,7 @@
             android:id="@+id/btn_submit"
             style="@style/button"
             android:layout_marginTop="8dp"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,22 +34,24 @@
             style="@style/edit_text"
             android:layout_marginTop="130dp"
             android:drawableStart="@drawable/outline_person_pin"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/et_password"
             style="@style/edit_text"
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_lock"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="numberPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_username" />
+            app:layout_constraintTop_toBottomOf="@+id/et_username"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/et_update_username"
@@ -61,7 +63,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="ahmed" />
+            tools:text="ahmed"
+            tools:ignore="Autofill" />
 
 
         <EditText
@@ -69,12 +72,13 @@
             style="@style/edit_text"
             android:layout_marginTop="16dp"
             android:drawableStart="@drawable/outline_lock"
-            android:inputType="number"
+            android:inputType="numberPassword"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_username"
-            tools:text="4421" />
+            tools:text="4421"
+            tools:ignore="Autofill" />
 
 
         <EditText
@@ -87,7 +91,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_update_password"
-            tools:text="16" />
+            tools:text="16"
+            tools:ignore="Autofill" />
 
 
         <EditText
@@ -100,14 +105,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_permissions"
-            tools:text="Ahmed" />
+            tools:text="Ahmed"
+            tools:ignore="Autofill" />
 
 
         <Button
             android:id="@+id/btn_update"
             style="@style/button"
             android:layout_marginBottom="32dp"
-            android:text="Update"
+            android:text="@string/update"
             android:textSize="16sp"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"

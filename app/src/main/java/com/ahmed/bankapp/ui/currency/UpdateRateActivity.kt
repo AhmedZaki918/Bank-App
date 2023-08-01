@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.currency
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.Currency
 import com.ahmed.bankapp.databinding.ActivityUpdateRateBinding
 import com.ahmed.bankapp.util.click
@@ -19,7 +20,7 @@ class UpdateRateActivity : AppCompatActivity() {
         binding = ActivityUpdateRateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Update Rate", this)
+        binding.header.drawScreenHeader(getString(R.string.update_rate), this)
         binding.btnUpdate.click {
             updateExchangeRate()
         }
@@ -33,9 +34,9 @@ class UpdateRateActivity : AppCompatActivity() {
             val currencyItem = Currency.findByCode(currencyCode)
             if (currencyItem.isCurrencyExist()) {
                 currencyItem.updateRate(currencyCode, exchangeRate.toFloat())
-                toast("Exchange rate has been updated")
+                toast(getString(R.string.exchange_rate_updated))
                 finish()
-            } else toast("Invalid currency code")
+            } else toast(getString(R.string.invalid_currency_code))
         }
     }
 }

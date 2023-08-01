@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.databinding.ActivityLoginLogBinding
 import com.ahmed.bankapp.ui.adapter.LoginLogAdapter
@@ -20,7 +21,7 @@ class LoginLogActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Login Log (${BankUser.displayLoginLogs().size})",
+                "${getString(R.string.login_log)} (${BankUser.displayLoginLogs().size})",
                 this@LoginLogActivity
             )
             rvLoginLog.adapter = LoginLogAdapter(BankUser.displayLoginLogs())

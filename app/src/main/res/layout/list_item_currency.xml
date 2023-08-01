@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/outline_place"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_country_label"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Country"
+        android:text="@string/country"
         android:textColor="@color/offWhite"
         app:layout_constraintBottom_toBottomOf="@+id/iv_country"
         app:layout_constraintStart_toEndOf="@+id/iv_country"
@@ -54,7 +55,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_country"
         app:srcCompat="@drawable/outline_code"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_code_label"
@@ -62,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Code"
+        android:text="@string/code"
         android:textColor="@color/offWhite"
         app:layout_constraintBottom_toBottomOf="@+id/iv_code"
         app:layout_constraintStart_toEndOf="@+id/iv_code"
@@ -90,7 +92,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_code"
         app:srcCompat="@drawable/outline_money_custom"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_currency_label"
@@ -98,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Currency"
+        android:text="@string/currency"
         android:textColor="@color/offWhite"
         app:layout_constraintBottom_toBottomOf="@+id/iv_currency"
         app:layout_constraintStart_toEndOf="@+id/iv_currency"
@@ -126,7 +129,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_currency"
         app:srcCompat="@drawable/outline_currency_exchange"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_exchange_rate_label"
@@ -134,7 +138,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:alpha="0.7"
-        android:text="Rate(1$)"
+        android:text="@string/rate_1"
         android:textColor="@color/offWhite"
         app:layout_constraintBottom_toBottomOf="@+id/iv_exchange_rate"
         app:layout_constraintStart_toEndOf="@+id/iv_exchange_rate"

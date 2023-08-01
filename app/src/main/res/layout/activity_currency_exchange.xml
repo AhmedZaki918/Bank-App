@@ -43,14 +43,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_money" />
+                app:srcCompat="@drawable/outline_money"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_currencies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Currencies"
+                android:text="@string/currencies"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_currencies"
                 app:layout_constraintStart_toEndOf="@+id/iv_currencies"
@@ -94,14 +95,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_search" />
+                app:srcCompat="@drawable/outline_search"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_search_currency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Search Currency"
+                android:text="@string/search_currency"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_search_currency"
                 app:layout_constraintStart_toEndOf="@+id/iv_search_currency"
@@ -145,14 +147,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_edit_note" />
+                app:srcCompat="@drawable/outline_edit_note"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_update_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Update Exchange Rate"
+                android:text="@string/update_exchange_rate"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_update_rate"
                 app:layout_constraintStart_toEndOf="@+id/iv_update_rate"
@@ -196,14 +199,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_calculate" />
+                app:srcCompat="@drawable/outline_calculate"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_currency_calculator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Currency Calculator"
+                android:text="@string/currency_calculator"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_currency_calculator"
                 app:layout_constraintStart_toEndOf="@+id/iv_currency_calculator"

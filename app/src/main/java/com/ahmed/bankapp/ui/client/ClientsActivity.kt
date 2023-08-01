@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.client
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityClientsBinding
 import com.ahmed.bankapp.ui.adapter.ClientsAdapter
@@ -20,7 +21,7 @@ class ClientsActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Clients (${BankClient.displayClients().size})",
+                "${getString(R.string.clients)} (${BankClient.displayClients().size})",
                 this@ClientsActivity
             )
             rvClients.adapter = ClientsAdapter(BankClient.displayClients())

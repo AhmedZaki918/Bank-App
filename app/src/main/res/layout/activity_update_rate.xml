@@ -15,7 +15,7 @@
         android:id="@+id/btn_update"
         style="@style/button"
         android:layout_marginTop="8dp"
-        android:text="Update"
+        android:text="@string/update"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,11 +27,12 @@
         style="@style/edit_text"
         android:layout_marginTop="130dp"
         android:drawableStart="@drawable/outline_code"
-        android:hint="Currency code "
+        android:hint="@string/currency_code"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/et_exchange_rate"
@@ -39,11 +40,12 @@
         android:layout_marginTop="8dp"
         android:drawableStart="@drawable/outline_currency_exchange"
         android:drawableTint="@color/zeroWhite"
-        android:hint="Exchange rate"
+        android:hint="@string/exchange_rate"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_currency_code" />
+        app:layout_constraintTop_toBottomOf="@+id/et_currency_code"
+        tools:ignore="Autofill" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

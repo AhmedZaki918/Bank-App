@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.transactions
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityBalancesBinding
 import com.ahmed.bankapp.ui.adapter.BalancesAdapter
@@ -20,11 +21,11 @@ class BalancesActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Balances",
+                getString(R.string.balances),
                 this@BalancesActivity
             )
             rvBalances.adapter = BalancesAdapter(BankClient.displayClients())
-            val balances = "${BankClient.getTotalBalances()} EGP"
+            val balances = "${BankClient.getTotalBalances()} ${getString(R.string.egp)}"
             tvTotalBalances.text = balances
         }
     }

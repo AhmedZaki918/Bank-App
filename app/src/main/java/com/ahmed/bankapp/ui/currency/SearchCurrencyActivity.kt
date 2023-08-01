@@ -27,11 +27,11 @@ class SearchCurrencyActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Search Currency",
+                getString(R.string.search_currency),
                 this@SearchCurrencyActivity
             )
             btnSubmit.click {
-                if (searchMode == COUNTRY) etSearch.hint = "Country name"
+                if (searchMode == COUNTRY) etSearch.hint = getString(R.string.country_name)
                 switchVisibility()
             }
             btnSearch.click { search() }
@@ -46,10 +46,10 @@ class SearchCurrencyActivity : AppCompatActivity() {
         val userInput = binding.etSearch.text.toString().trim()
         if (searchMode == CODE) {
             val currency = Currency.findByCode(userInput)
-            updateUi(currency, "Invalid currency code")
+            updateUi(currency, getString(R.string.invalid_currency_code))
         } else {
             val currency = Currency.findByCountry(userInput)
-            updateUi(currency, "No country has been found")
+            updateUi(currency, getString(R.string.invalid_country_name))
         }
     }
 

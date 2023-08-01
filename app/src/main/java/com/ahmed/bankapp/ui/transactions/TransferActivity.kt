@@ -3,6 +3,7 @@ package com.ahmed.bankapp.ui.transactions
 import android.os.Bundle
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.data.Status
 import com.ahmed.bankapp.databinding.ActivityTransferBinding
@@ -17,15 +18,15 @@ class TransferActivity : AppCompatActivity() {
     private var fromClient: BankClient? = null
     private var toClient: BankClient? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplash()
-
         binding = ActivityTransferBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Transfer",this@TransferActivity)
+            header.drawScreenHeader(getString(R.string.transfer), this@TransferActivity)
             btnSubmit.click { getUserInput() }
             btnTransfer.click { transfer() }
         }
@@ -42,9 +43,38 @@ class TransferActivity : AppCompatActivity() {
             if (fromClient!!.isClientExist() && toClient!!.isClientExist()) {
                 showScreen()
                 displayClientsData(fromClient!!, toClient!!)
-            } else toast("Clients not found!")
+            } else toast(getString(R.string.client_not_found))
         }
     }
+
+
+    private fun displayClientsData(fromClient: BankClient, toClient: BankClient) {
+        binding.apply {
+            val fromFullName = fromClient.firstName + " " + fromClient.lastName
+            tvFullname.text = fromFullName
+            tvAccNumber.text = fromClient.accountNumber
+            tvBalance.text = fromClient.accountBalance.toString()
+
+            val toFullName = toClient.firstName + " " + toClient.lastName
+            toTvFullname.text = toFullName
+            toTvAccNumber.text = toClient.accountNumber
+            toTvBalance.text = toClient.accountBalance.toString()
+        }
+    }
+
+
+    private fun transfer() {
+        val amount = binding.etTransferAmount.text.toString().trim()
+        val transferResult = fromClient!!.transferMoney(
+            amount.toDouble(),
+            toClient!!
+        )
+        if (transferResult == Status.SUCCESS.value) {
+            toast(getString(R.string.transfer_completed))
+            finish()
+        } else toast(getString(R.string.transfer_failed))
+    }
+
 
     private fun showScreen() {
         binding.apply {
@@ -74,29 +104,5 @@ class TransferActivity : AppCompatActivity() {
             imageView22.visibility = VISIBLE
             imageView23.visibility = VISIBLE
         }
-    }
-
-    private fun displayClientsData(fromClient: BankClient, toClient: BankClient) {
-        binding.apply {
-            tvFullname.text = fromClient.firstName + " " + fromClient.lastName
-            tvAccNumber.text = fromClient.accountNumber
-            tvBalance.text = fromClient.accountBalance.toString()
-            toTvFullname.text = toClient.firstName + " " + toClient.lastName
-            toTvAccNumber.text = toClient.accountNumber
-            toTvBalance.text = toClient.accountBalance.toString()
-        }
-    }
-
-    private fun transfer() {
-        val amount = binding.etTransferAmount.text.toString().trim()
-        val transferResult = fromClient!!.transferMoney(
-            amount.toDouble(),
-            toClient!!
-        )
-
-        if (transferResult == Status.SUCCESS.value) {
-            toast("Transfer has been completed")
-            finish()
-        } else toast("Transfer has been failed")
     }
 }

@@ -163,7 +163,7 @@ data class BankClient(
             firstName: String,
             lastName: String,
             accountBalance: String
-        ): String {
+        ): BankClient {
 
             for (i in clients.indices) {
                 if (accountNumber == clients[i].accountNumber) {
@@ -176,11 +176,11 @@ data class BankClient(
                             lastName
                         )
                         clients.set(i, item)
+                        return item
                     }
-                    break
                 }
             }
-            return "Client has been updated"
+            return getEmptyClient()
         }
 
 
@@ -205,13 +205,5 @@ data class BankClient(
         fun displayClients(): ArrayList<BankClient> {
             return clients
         }
-    }
-
-
-    override fun toString(): String {
-        return "   Account Number  :    " + accountNumber + "\n" +
-                "   Pin Code                :    " + pinCode + "\n" +
-                "   Name                      :    " + firstName + " " + lastName + "\n" +
-                "   Account Balance  :    " + accountBalance + "\n\n"
     }
 }

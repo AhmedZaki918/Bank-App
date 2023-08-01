@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.databinding.ActivityTransactionsBinding
 import com.ahmed.bankapp.ui.transactions.BalancesActivity
 import com.ahmed.bankapp.ui.transactions.DepositActivity
@@ -26,7 +27,7 @@ class TransactionsActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Transactions",
+                getString(R.string.transactions),
                 this@TransactionsActivity
             )
             cvDeposit.click { openActivity(DepositActivity::class.java) }

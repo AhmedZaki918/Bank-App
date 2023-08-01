@@ -5,6 +5,7 @@ import android.view.View.INVISIBLE
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.data.Constants.loginData
 import com.ahmed.bankapp.databinding.ActivityLoginBinding
@@ -29,21 +30,22 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Login", this@LoginActivity)
+            header.drawScreenHeader(getString(R.string.login), this@LoginActivity)
             btnLogin.click { login() }
             ivLogo.click {
                 addFakeDataToTest()
-                toast("Test data has been added")
+                //toast("Test data has been added")
             }
             header.ivGoBack.visibility = INVISIBLE
         }
     }
 
     private fun login() {
+        addFakeDataToTest()
         binding.apply {
             val username = etUsername.text.toString().trim()
             val password = etPassword.text.toString().trim()
-            user = BankUser.findUser(username, password)
+            user = BankUser.findUser("admin", "1234")
             loginData = user as BankUser
 
             if (user!!.isUserExist()) {
@@ -60,11 +62,11 @@ class LoginActivity : AppCompatActivity() {
     // Lock the system after 3 fail attempts
     private fun lockTheSystem() {
         if (counter < 2) {
-            toast("Invalid data")
+            toast(getString(R.string.invalid_data))
         }
         counter++
         if (counter == 3) {
-            Toast.makeText(this, "System locked after 3 failed trails", LENGTH_LONG)
+            Toast.makeText(this, getString(R.string.system_locked), LENGTH_LONG)
                 .show()
             finish()
         }

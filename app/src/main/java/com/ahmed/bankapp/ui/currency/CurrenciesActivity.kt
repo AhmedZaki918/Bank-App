@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.currency
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.Currency
 import com.ahmed.bankapp.databinding.ActivityCurrenciesBinding
 import com.ahmed.bankapp.ui.adapter.CurrenciesAdapter
@@ -20,7 +21,7 @@ class CurrenciesActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Currencies (${Currency.getCurrencies().size})",
+                "${getString(R.string.currencies)} (${Currency.getCurrencies().size})",
                 this@CurrenciesActivity
             )
             rvCurrencies.adapter = CurrenciesAdapter(Currency.getCurrencies())

@@ -27,7 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_fullname"
         app:srcCompat="@drawable/outline_person"
-        app:tint="@color/offWhite" />
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -37,7 +38,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/tv_fullname"
-        app:srcCompat="@drawable/outline_lock" />
+        app:srcCompat="@drawable/outline_lock"
+        tools:ignore="ContentDescription" />
 
 
     <TextView
@@ -61,7 +63,8 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@drawable/outline_app_permission" />
+        app:srcCompat="@drawable/outline_app_permission"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_permissions"
@@ -83,7 +86,8 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/iv_permissions"
         app:layout_constraintTop_toBottomOf="@+id/iv_permissions"
-        app:srcCompat="@drawable/outline_person_pin" />
+        app:srcCompat="@drawable/outline_person_pin"
+        tools:ignore="ContentDescription" />
 
 
     <TextView

@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.databinding.ActivityCurrencyExchangeBinding
 import com.ahmed.bankapp.ui.currency.CurrenciesActivity
 import com.ahmed.bankapp.ui.currency.SearchCurrencyActivity
@@ -23,7 +24,7 @@ class CurrencyExchangeActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Currency Exchange",
+                getString(R.string.currency_exchange),
                 this@CurrencyExchangeActivity
             )
             cvShowCurrencies.click {

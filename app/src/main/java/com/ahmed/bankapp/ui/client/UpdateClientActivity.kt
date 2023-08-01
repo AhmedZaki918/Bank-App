@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityUpdateClientBinding
 import com.ahmed.bankapp.util.changeToDefaultColor
@@ -24,7 +25,7 @@ class UpdateClientActivity : AppCompatActivity() {
         binding = ActivityUpdateClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickListeners()
-        binding.header.drawScreenHeader("Update Client",this)
+        binding.header.drawScreenHeader(getString(R.string.update_client), this)
     }
 
 
@@ -55,22 +56,23 @@ class UpdateClientActivity : AppCompatActivity() {
                 etLastName.changeToDefaultColor(applicationContext)
                 etAccountBalance.changeToDefaultColor(applicationContext)
             }
-        } else toast("Client with account number Not found!")
+        } else toast(getString(R.string.client_not_found))
     }
 
 
     private fun updateClientByAccountNumber(accountNumber: String) {
         binding.apply {
-            toast(
-                BankClient.updateClient(
-                    accountNumber,
-                    etPinCode.text.toString().trim(),
-                    etFirstName.text.toString().trim(),
-                    etLastName.text.toString().trim(),
-                    etAccountBalance.text.toString().trim()
-                )
+            val client = BankClient.updateClient(
+                accountNumber,
+                etPinCode.text.toString().trim(),
+                etFirstName.text.toString().trim(),
+                etLastName.text.toString().trim(),
+                etAccountBalance.text.toString().trim()
             )
-            finish()
+            if (client.isClientExist()) {
+                toast(getString(R.string.client_updated))
+                finish()
+            } else toast(getString(R.string.client_not_found))
         }
     }
 

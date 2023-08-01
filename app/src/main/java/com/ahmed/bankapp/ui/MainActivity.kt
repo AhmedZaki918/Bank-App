@@ -3,6 +3,7 @@ package com.ahmed.bankapp.ui
 import android.os.Bundle
 import android.view.View.INVISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.data.Constants.loginData
 import com.ahmed.bankapp.data.Permissions
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Home",this)
+        binding.header.drawScreenHeader(getString(R.string.home), this)
         setClickListeners()
         binding.header.ivGoBack.visibility = INVISIBLE
     }
@@ -43,21 +44,23 @@ class MainActivity : AppCompatActivity() {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.MANAGE_USERS.value)
                 if (permissionStatus) openActivity(ManageUsersActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
             }
 
             cvTransactions.click {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.TRANSACTIONS.value)
                 if (permissionStatus) openActivity(TransactionsActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
+
             }
 
             cvLoginHistory.click {
                 val permissionStatus =
                     loginData.checkPermission(Permissions.REGISTER_LOGIN.value)
                 if (permissionStatus) openActivity(LoginLogActivity::class.java)
-                else toast("Access Denied")
+                else toast(getString(R.string.access_denied))
+
             }
 
             cvCurrencyExchange.click {

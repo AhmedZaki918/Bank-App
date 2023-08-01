@@ -22,6 +22,10 @@ fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
+fun Context.toast(resourceId: Int) {
+    Toast.makeText(this, resourceId, Toast.LENGTH_SHORT).show()
+}
+
 
 fun View.click(block: () -> Unit) {
     this.setOnClickListener {

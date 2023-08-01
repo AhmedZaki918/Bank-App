@@ -17,7 +17,7 @@
         android:id="@+id/btn_submit"
         style="@style/button"
         android:layout_marginTop="8dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +28,12 @@
         style="@style/edit_text"
         android:layout_marginTop="150dp"
         android:drawableStart="@drawable/outline_numbers"
-        android:hint="Account number"
+        android:hint="@string/account_number_lowercase"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/et_pin_code"
@@ -44,7 +45,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="1234" />
+        tools:text="1234"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -57,7 +59,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_pin_code"
-        tools:text="Ahmed" />
+        tools:text="Ahmed"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -70,7 +73,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_first_name"
-        tools:text="Zaki" />
+        tools:text="Zaki"
+        tools:ignore="Autofill" />
 
 
     <EditText
@@ -83,14 +87,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_lastName"
-        tools:text="4000" />
+        tools:text="4000"
+        tools:ignore="Autofill" />
 
 
     <Button
         android:id="@+id/btn_update"
         style="@style/button"
         android:layout_marginBottom="32dp"
-        android:text="Update"
+        android:text="@string/update"
         android:textSize="16sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"

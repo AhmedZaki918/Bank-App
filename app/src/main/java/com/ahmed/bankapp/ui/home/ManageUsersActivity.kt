@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.databinding.ActivityManageUsersBinding
 import com.ahmed.bankapp.ui.user.AddUserActivity
 import com.ahmed.bankapp.ui.user.DeleteUserActivity
@@ -23,7 +24,7 @@ class ManageUsersActivity : AppCompatActivity() {
         binding = ActivityManageUsersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Manage Users",this)
+        binding.header.drawScreenHeader(getString(R.string.manage_users),this)
 
         binding.apply {
             cvAddUser.click { openActivity(AddUserActivity::class.java) }

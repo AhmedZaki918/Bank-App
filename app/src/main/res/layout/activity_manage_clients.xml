@@ -45,14 +45,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/baseline_person_outline" />
+                app:srcCompat="@drawable/baseline_person_outline"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_clients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Show Clients"
+                android:text="@string/show_clients"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_clients"
                 app:layout_constraintStart_toEndOf="@+id/iv_clients"
@@ -96,14 +97,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_person_remove" />
+                app:srcCompat="@drawable/outline_person_remove"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Delete Client"
+                android:text="@string/delete_client"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_delete"
                 app:layout_constraintStart_toEndOf="@+id/iv_delete"
@@ -148,14 +150,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_edit_note" />
+                app:srcCompat="@drawable/outline_edit_note"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_update"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Update Client"
+                android:text="@string/update_client"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_update"
                 app:layout_constraintStart_toEndOf="@+id/iv_update"
@@ -200,14 +203,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_person_search" />
+                app:srcCompat="@drawable/outline_person_search"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_find"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Find Client"
+                android:text="@string/find_client"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_find"
                 app:layout_constraintStart_toEndOf="@+id/iv_find"
@@ -252,14 +256,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/outline_person_add" />
+                app:srcCompat="@drawable/outline_person_add"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:text="Add Client"
+                android:text="@string/add_client"
                 android:textColor="@color/offWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_add"
                 app:layout_constraintStart_toEndOf="@+id/iv_add"

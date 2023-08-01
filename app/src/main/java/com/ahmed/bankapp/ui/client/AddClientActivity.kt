@@ -3,8 +3,8 @@ package com.ahmed.bankapp.ui.client
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankClient
-import com.ahmed.bankapp.data.log.LogLogin
 import com.ahmed.bankapp.databinding.ActivityAddClientBinding
 import com.ahmed.bankapp.util.click
 import com.ahmed.bankapp.util.drawScreenHeader
@@ -42,7 +42,10 @@ class AddClientActivity : AppCompatActivity() {
             btnAddClient.click {
                 getUserInput()
             }
-            header.drawScreenHeader("Add Client",this@AddClientActivity)
+            header.drawScreenHeader(
+                getString(R.string.add_client),
+                this@AddClientActivity
+            )
         }
     }
 
@@ -69,8 +72,8 @@ class AddClientActivity : AppCompatActivity() {
                 firstName,
                 lastName
             )
-            toast("Client has been added")
+            toast(getString(R.string.client_has_been_added))
             finish()
-        } else toast("Account number already exists")
+        } else toast(getString(R.string.account_number_exists))
     }
 }

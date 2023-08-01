@@ -2,6 +2,7 @@ package com.ahmed.bankapp.ui.user
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ahmed.bankapp.R
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.databinding.ActivityUsersBinding
 import com.ahmed.bankapp.ui.adapter.UsersAdapter
@@ -20,7 +21,7 @@ class UsersActivity : AppCompatActivity() {
 
         binding.apply {
             header.drawScreenHeader(
-                "Users (${BankUser.displayUsers().size})",
+                "${getString(R.string.users)} (${BankUser.displayUsers().size})",
                 this@UsersActivity
             )
             rvUsers.adapter = UsersAdapter(BankUser.displayUsers())

@@ -26,22 +26,24 @@
             style="@style/edit_text"
             android:layout_marginTop="130dp"
             android:drawableStart="@drawable/outline_person"
-            android:hint="First name"
+            android:hint="@string/first_name"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/et_user_last_name"
             style="@style/edit_text"
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_person"
-            android:hint="Last name"
+            android:hint="@string/last_name"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_user_first_name" />
+            app:layout_constraintTop_toBottomOf="@+id/et_user_first_name"
+            tools:ignore="Autofill" />
 
 
         <EditText
@@ -49,11 +51,12 @@
             style="@style/edit_text"
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_person_pin"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_user_last_name" />
+            app:layout_constraintTop_toBottomOf="@+id/et_user_last_name"
+            tools:ignore="Autofill" />
 
 
         <EditText
@@ -61,11 +64,12 @@
             style="@style/edit_text"
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_lock"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_username" />
+            app:layout_constraintTop_toBottomOf="@+id/et_username"
+            tools:ignore="Autofill" />
 
 
         <TextView
@@ -75,7 +79,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="64dp"
             android:alpha="0.9"
-            android:text="User Permissions"
+            android:text="@string/user_permissions"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/imageView12"
@@ -123,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Show clients"
+            android:text="@string/show_clients_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
@@ -161,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Add client"
+            android:text="@string/add_client_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
@@ -210,7 +214,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Delete client"
+            android:text="@string/delete_client_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
@@ -270,7 +274,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Update client"
+            android:text="@string/update_client_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
@@ -320,7 +324,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Search client"
+            android:text="@string/search_client_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView14"
@@ -368,7 +372,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Transactions"
+            android:text="@string/transactions"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView15"
@@ -418,7 +422,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Manage accounts"
+            android:text="@string/manage_users_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView16"
@@ -466,7 +470,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:alpha="0.5"
-            android:text="Login log"
+            android:text="@string/login_log_lowercase"
             android:textColor="@color/offWhite"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView17"
@@ -490,7 +494,7 @@
             style="@style/button"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
-            android:text="Add User"
+            android:text="@string/add_user"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
