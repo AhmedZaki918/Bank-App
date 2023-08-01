@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ahmed.bankapp.databinding.ActivityCurrencyExchangeBinding
 import com.ahmed.bankapp.ui.currency.CurrenciesActivity
 import com.ahmed.bankapp.ui.currency.SearchCurrencyActivity
+import com.ahmed.bankapp.ui.currency.UpdateRateActivity
 import com.ahmed.bankapp.util.click
 import com.ahmed.bankapp.util.drawScreenHeader
 import com.ahmed.bankapp.util.installSplash
@@ -21,12 +22,18 @@ class CurrencyExchangeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Currency Exchange")
+            header.drawScreenHeader(
+                "Currency Exchange",
+                this@CurrencyExchangeActivity
+            )
             cvShowCurrencies.click {
                 openActivity(CurrenciesActivity::class.java)
             }
             cvSearchCurrency.click {
                 openActivity(SearchCurrencyActivity::class.java)
+            }
+            cvUpdateRate.click {
+                openActivity(UpdateRateActivity::class.java)
             }
         }
     }

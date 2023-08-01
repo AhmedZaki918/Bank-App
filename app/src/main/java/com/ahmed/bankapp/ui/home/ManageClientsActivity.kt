@@ -27,7 +27,7 @@ class ManageClientsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Manage Clients")
+            header.drawScreenHeader("Manage Clients", this@ManageClientsActivity)
 
             cvAddClient.click {
                 val permissionStatus =

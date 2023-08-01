@@ -36,11 +36,15 @@ fun <T : Any?> Context.openActivity(activity: Class<T>) {
 
 
 fun HeaderBinding.drawScreenHeader(
-    screenTitle: String
+    screenTitle: String,
+    activity: Activity
 ) {
     this.tvLoggedInUser.text = loginData.firstName
     this.tvScreenName.text = screenTitle
     this.tvDateTime.text = SimpleDateFormat("dd/MM/yyyy").format(Date())
+    this.ivGoBack.click {
+        activity.finish()
+    }
 }
 
 
@@ -68,7 +72,7 @@ fun EditText.changeToDefaultColor(context: Context) {
     )
 }
 
-fun Activity.installSplash(){
+fun Activity.installSplash() {
     installSplashScreen()
 }
 

@@ -22,7 +22,7 @@ class AddUserActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.header.drawScreenHeader("Add User")
+        binding.header.drawScreenHeader("Add User",this)
         readPermissions()
         binding.btnAddClient.click {
             addUser()

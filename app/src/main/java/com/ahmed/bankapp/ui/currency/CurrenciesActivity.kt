@@ -19,7 +19,10 @@ class CurrenciesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Currencies (${Currency.getCurrencies().size})")
+            header.drawScreenHeader(
+                "Currencies (${Currency.getCurrencies().size})",
+                this@CurrenciesActivity
+            )
             rvCurrencies.adapter = CurrenciesAdapter(Currency.getCurrencies())
         }
     }

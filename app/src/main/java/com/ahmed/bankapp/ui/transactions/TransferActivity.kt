@@ -25,7 +25,7 @@ class TransferActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Transfer")
+            header.drawScreenHeader("Transfer",this@TransferActivity)
             btnSubmit.click { getUserInput() }
             btnTransfer.click { transfer() }
         }

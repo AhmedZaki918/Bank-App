@@ -23,7 +23,7 @@ class ManageUsersActivity : AppCompatActivity() {
         binding = ActivityManageUsersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Manage Users")
+        binding.header.drawScreenHeader("Manage Users",this)
 
         binding.apply {
             cvAddUser.click { openActivity(AddUserActivity::class.java) }

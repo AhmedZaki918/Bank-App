@@ -28,9 +28,6 @@ class AddClientActivity : AppCompatActivity() {
         binding = ActivityAddClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Display Screen Header
-        binding.header.drawScreenHeader("Add Client")
-
 
         // Create list of edittext
         binding.apply {
@@ -42,10 +39,10 @@ class AddClientActivity : AppCompatActivity() {
                 add(etAccountBalance)
             }
 
-            // Click listeners
             btnAddClient.click {
                 getUserInput()
             }
+            header.drawScreenHeader("Add Client",this@AddClientActivity)
         }
     }
 

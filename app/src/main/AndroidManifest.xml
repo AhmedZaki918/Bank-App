@@ -13,6 +13,9 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
+            android:name=".ui.currency.UpdateRateActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.currency.SearchCurrencyActivity"
             android:exported="false" />
         <activity

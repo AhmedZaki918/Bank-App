@@ -27,7 +27,7 @@ class WithdrawActivity : AppCompatActivity() {
         binding = ActivityWithdrawBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Withdraw")
+        binding.header.drawScreenHeader("Withdraw", this)
 
         // Create list of textview
         binding.apply {
@@ -61,11 +61,10 @@ class WithdrawActivity : AppCompatActivity() {
                 etAccountNumber.visibility = INVISIBLE
                 val amount = binding.etAccountBalance.text.toString().toDouble()
                 val withdrawResult = client!!.withdraw(amount)
-                if (withdrawResult == Status.SUCCESS.value){
+                if (withdrawResult == Status.SUCCESS.value) {
                     toast("Withdraw has been completed")
                     finish()
-                }
-                else toast("You don't have enough credit!")
+                } else toast("You don't have enough credit!")
             }
         }
     }

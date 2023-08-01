@@ -1,6 +1,7 @@
 package com.ahmed.bankapp.ui
 
 import android.os.Bundle
+import android.view.View.INVISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import com.ahmed.bankapp.data.BankUser
 import com.ahmed.bankapp.data.Constants.loginData
@@ -27,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Home")
+        binding.header.drawScreenHeader("Home",this)
         setClickListeners()
+        binding.header.ivGoBack.visibility = INVISIBLE
     }
 
     private fun setClickListeners() {

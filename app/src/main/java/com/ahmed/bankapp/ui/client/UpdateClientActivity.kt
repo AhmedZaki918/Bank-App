@@ -24,7 +24,7 @@ class UpdateClientActivity : AppCompatActivity() {
         binding = ActivityUpdateClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickListeners()
-        binding.header.drawScreenHeader("Update Client")
+        binding.header.drawScreenHeader("Update Client",this)
     }
 
 

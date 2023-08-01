@@ -25,7 +25,10 @@ class TransactionsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Transactions")
+            header.drawScreenHeader(
+                "Transactions",
+                this@TransactionsActivity
+            )
             cvDeposit.click { openActivity(DepositActivity::class.java) }
             cvWithdraw.click { openActivity(WithdrawActivity::class.java) }
             cvTotalBalances.click { openActivity(BalancesActivity::class.java) }

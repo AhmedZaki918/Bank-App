@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.ahmed.bankapp.data.BankClient
 import com.ahmed.bankapp.databinding.ActivityDepositBinding
@@ -28,7 +27,7 @@ class DepositActivity : AppCompatActivity() {
         binding = ActivityDepositBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Deposit")
+        binding.header.drawScreenHeader("Deposit", this)
 
         // Create list of textview
         binding.apply {

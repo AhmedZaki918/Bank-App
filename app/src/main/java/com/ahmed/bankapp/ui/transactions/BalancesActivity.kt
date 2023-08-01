@@ -19,7 +19,10 @@ class BalancesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Balances")
+            header.drawScreenHeader(
+                "Balances",
+                this@BalancesActivity
+            )
             rvBalances.adapter = BalancesAdapter(BankClient.displayClients())
             val balances = "${BankClient.getTotalBalances()} EGP"
             tvTotalBalances.text = balances

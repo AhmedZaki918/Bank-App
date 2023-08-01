@@ -25,7 +25,7 @@ class UpdateUserActivity : AppCompatActivity() {
         binding = ActivityUpdateUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Update User")
+        binding.header.drawScreenHeader("Update User",this)
         clickListeners()
     }
 

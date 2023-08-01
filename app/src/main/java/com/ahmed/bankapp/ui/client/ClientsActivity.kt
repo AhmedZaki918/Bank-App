@@ -19,7 +19,10 @@ class ClientsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Clients (${BankClient.displayClients().size})")
+            header.drawScreenHeader(
+                "Clients (${BankClient.displayClients().size})",
+                this@ClientsActivity
+            )
             rvClients.adapter = ClientsAdapter(BankClient.displayClients())
         }
     }

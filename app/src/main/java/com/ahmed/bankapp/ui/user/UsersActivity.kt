@@ -19,7 +19,10 @@ class UsersActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Users (${BankUser.displayUsers().size})")
+            header.drawScreenHeader(
+                "Users (${BankUser.displayUsers().size})",
+                this@UsersActivity
+            )
             rvUsers.adapter = UsersAdapter(BankUser.displayUsers())
         }
     }

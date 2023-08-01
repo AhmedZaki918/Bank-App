@@ -1,6 +1,7 @@
 package com.ahmed.bankapp.ui
 
 import android.os.Bundle
+import android.view.View.INVISIBLE
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
@@ -28,12 +29,13 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Login")
+            header.drawScreenHeader("Login", this@LoginActivity)
             btnLogin.click { login() }
-            btnTest.click {
+            ivLogo.click {
                 addFakeDataToTest()
                 toast("Test data has been added")
             }
+            header.ivGoBack.visibility = INVISIBLE
         }
     }
 
@@ -53,8 +55,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-
-
 
 
     // Lock the system after 3 fail attempts

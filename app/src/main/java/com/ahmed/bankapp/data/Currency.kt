@@ -87,6 +87,11 @@ data class Currency(
         return getEmptyCurrency()
     }
 
+
+    fun isCurrencyExist(): Boolean{
+        return currencyCode != ""
+    }
+
     fun countryName(): String {
         return countryName
     }

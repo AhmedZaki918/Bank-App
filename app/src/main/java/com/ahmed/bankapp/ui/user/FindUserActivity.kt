@@ -24,7 +24,7 @@ class FindUserActivity : AppCompatActivity() {
         binding = ActivityFindUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Find User")
+        binding.header.drawScreenHeader("Find User",this)
 
         // Create list of textview
         binding.apply {

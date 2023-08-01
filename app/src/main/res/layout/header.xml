@@ -68,5 +68,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_date_label"
         tools:text="17/7/2023" />
+
+    <ImageView
+        android:id="@+id/iv_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_screen_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_screen_name"
+        app:srcCompat="@drawable/outline_arrow_back" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

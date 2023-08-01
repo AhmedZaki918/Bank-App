@@ -26,7 +26,7 @@ class DeleteClientActivity : AppCompatActivity() {
         binding = ActivityDeleteClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Delete Client")
+        binding.header.drawScreenHeader("Delete Client",this)
 
         // Create list of textview
         binding.apply {

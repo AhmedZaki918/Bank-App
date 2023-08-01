@@ -26,14 +26,15 @@ class SearchCurrencyActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Search Currency")
+            header.drawScreenHeader(
+                "Search Currency",
+                this@SearchCurrencyActivity
+            )
             btnSubmit.click {
                 if (searchMode == COUNTRY) etSearch.hint = "Country name"
                 switchVisibility()
             }
-            btnSearch.click {
-                search()
-            }
+            btnSearch.click { search() }
             rgSearchMode.setOnCheckedChangeListener { _, id ->
                 searchMode = if (id == R.id.rb_code) CODE else COUNTRY
             }
@@ -45,7 +46,7 @@ class SearchCurrencyActivity : AppCompatActivity() {
         val userInput = binding.etSearch.text.toString().trim()
         if (searchMode == CODE) {
             val currency = Currency.findByCode(userInput)
-            updateUi(currency, "No currency code has been found")
+            updateUi(currency, "Invalid currency code")
         } else {
             val currency = Currency.findByCountry(userInput)
             updateUi(currency, "No country has been found")
@@ -54,7 +55,7 @@ class SearchCurrencyActivity : AppCompatActivity() {
 
 
     private fun updateUi(currency: Currency, searchError: String) {
-        if (currency.currencyCode() != "") {
+        if (currency.isCurrencyExist()) {
             switchVisibilityForCurrency()
             binding.apply {
                 tvCountry.text = currency.countryName()

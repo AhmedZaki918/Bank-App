@@ -25,7 +25,7 @@ class DeleteUserActivity : AppCompatActivity() {
         binding = ActivityDeleteUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Delete User")
+        binding.header.drawScreenHeader("Delete User",this)
 
         // Create list of textview
         binding.apply {

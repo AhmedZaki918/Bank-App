@@ -23,7 +23,7 @@ class FindClientActivity : AppCompatActivity() {
         binding = ActivityFindClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.header.drawScreenHeader("Find Client")
+        binding.header.drawScreenHeader("Find Client",this)
 
         // Create list of textview
         binding.apply {

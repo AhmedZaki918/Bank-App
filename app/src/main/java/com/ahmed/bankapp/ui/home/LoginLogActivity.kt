@@ -19,7 +19,10 @@ class LoginLogActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            header.drawScreenHeader("Login Log (${BankUser.displayLoginLogs().size})")
+            header.drawScreenHeader(
+                "Login Log (${BankUser.displayLoginLogs().size})",
+                this@LoginLogActivity
+            )
             rvLoginLog.adapter = LoginLogAdapter(BankUser.displayLoginLogs())
         }
     }

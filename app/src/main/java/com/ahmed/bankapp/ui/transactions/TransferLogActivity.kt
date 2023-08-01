@@ -19,7 +19,10 @@ class TransferLogActivity : AppCompatActivity() {
 
 
         binding.apply {
-            header.drawScreenHeader("Transfer Log (${BankClient.displayTransferLogs().size})")
+            header.drawScreenHeader(
+                "Transfer Log (${BankClient.displayTransferLogs().size})",
+                this@TransferLogActivity
+            )
             rvTransferLog.adapter = TransferLogAdapter(BankClient.displayTransferLogs())
         }
     }
