@@ -14,9 +14,7 @@ Bank System App to manage all basics sections in any bank like users, clients, t
 ## Functionality
 
 * Users Management
-  - ex:(admin, manager, employees)
-  
-  - Display all users
+  - Display all users ex:(admin, manager, employees)
   - Add a new user
   - Update existing user
   - Delete user
@@ -46,7 +44,7 @@ Bank System App to manage all basics sections in any bank like users, clients, t
   - Transactions
   - Display all Login log on system
  
- * Currency Exchange
+* Currency Exchange
   - Display all currencies
   - Search on specfic currency 
   - Update exchange rate on currency
