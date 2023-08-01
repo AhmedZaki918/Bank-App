@@ -41,11 +41,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun login() {
-        addFakeDataToTest()
         binding.apply {
             val username = etUsername.text.toString().trim()
             val password = etPassword.text.toString().trim()
-            user = BankUser.findUser("admin", "1234")
+            user = BankUser.findUser(username, password)
             loginData = user as BankUser
 
             if (user!!.isUserExist()) {

@@ -41,7 +41,7 @@
         android:drawableStart="@drawable/outline_currency_exchange"
         android:drawableTint="@color/zeroWhite"
         android:hint="@string/exchange_rate"
-        android:inputType="numberPassword"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_currency_code"

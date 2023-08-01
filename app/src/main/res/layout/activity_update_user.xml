@@ -70,7 +70,7 @@
         <EditText
             android:id="@+id/et_update_password"
             style="@style/edit_text"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_lock"
             android:inputType="numberPassword"
             android:visibility="invisible"
@@ -84,7 +84,7 @@
         <EditText
             android:id="@+id/et_permissions"
             style="@style/edit_text"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_app_permission"
             android:inputType="number"
             android:visibility="invisible"
@@ -98,7 +98,7 @@
         <EditText
             android:id="@+id/et_first_name"
             style="@style/edit_text"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:drawableStart="@drawable/outline_person"
             android:inputType="textPersonName"
             android:visibility="invisible"
