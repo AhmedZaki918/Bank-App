@@ -99,9 +99,9 @@ fun addFakeDataToTest() {
 
     Currency.getCurrencies().apply {
         add(Currency("United States of America", "USD", "US Dollar", 1.000000f))
-        add(Currency("Saudi Arabian", "SAR", "Saudi Riyal", 3.75f))
+        add(Currency("Saudi Arabian", "SAR", "Saudi Riyal", 3.7489f))
         add(Currency("England", "GBP", "British Pound", 0.77f))
-        add(Currency("Egypt", "EGP", "Egyptian Pound", 30.89f))
+        add(Currency("Egypt", "EGP", "Egyptian Pound", 30.85f))
         add(Currency("Kuwaiti", "KWD", "Kuwaiti Dinar", 0.308f))
         add(Currency("France", "EUR", "Euro", 0.90f))
         add(Currency("United Arab Emirates", "AED", "Emirati Dirhams", 3.67f))

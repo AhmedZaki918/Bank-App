@@ -120,6 +120,9 @@
     <string name="user_no_column">user</string>
     <string name="user_updated">User has been updated</string>
     <string name="client_updated">Client has been updated</string>
+    <string name="from_currency">From currency</string>
+    <string name="convert">Convert</string>
+    <string name="to_currency">To currency</string>
 
 
 </resources>

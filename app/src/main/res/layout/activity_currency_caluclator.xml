@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.currency.CurrencyCalculatorActivity">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/et_from_currency"
+        style="@style/edit_text"
+        android:layout_marginTop="130dp"
+        android:drawableStart="@drawable/outline_format_indent_decrease"
+        android:hint="@string/from_currency"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/et_to_currency"
+        style="@style/edit_text"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/outline_format_indent_increase"
+        android:hint="@string/to_currency"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_from_currency"
+        tools:ignore="Autofill" />
+
+
+    <EditText
+        android:id="@+id/et_amount"
+        style="@style/edit_text"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/outline_money"
+        android:drawableTint="@color/zeroWhite"
+        android:hint="@string/amount"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_to_currency"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/btn_convert"
+        style="@style/button"
+        android:layout_marginTop="8dp"
+        android:text="@string/convert"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_amount" />
+
+
+    <ImageView
+        android:id="@+id/iv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="130dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/outline_place"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_country_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/country"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_country"
+        app:layout_constraintStart_toEndOf="@+id/iv_country"
+        app:layout_constraintTop_toTopOf="@+id/iv_country" />
+
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/zeroWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_country_label"
+        app:layout_constraintStart_toEndOf="@+id/tv_country_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_country_label" />
+
+
+    <ImageView
+        android:id="@+id/iv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/iv_country"
+        app:layout_constraintTop_toBottomOf="@id/iv_country"
+        app:srcCompat="@drawable/outline_code"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_code_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/code"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_code"
+        app:layout_constraintStart_toEndOf="@+id/iv_code"
+        app:layout_constraintTop_toTopOf="@+id/iv_code" />
+
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zeroWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_code_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_country"
+        app:layout_constraintTop_toTopOf="@+id/tv_code_label" />
+
+
+    <ImageView
+        android:id="@+id/iv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/iv_code"
+        app:layout_constraintTop_toBottomOf="@id/iv_code"
+        app:srcCompat="@drawable/outline_money_custom"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_currency_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/currency"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_currency"
+        app:layout_constraintStart_toEndOf="@+id/iv_currency"
+        app:layout_constraintTop_toTopOf="@+id/iv_currency" />
+
+
+    <TextView
+        android:id="@+id/tv_currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zeroWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_currency_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_currency_label" />
+
+
+    <ImageView
+        android:id="@+id/iv_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/iv_currency"
+        app:layout_constraintTop_toBottomOf="@id/iv_currency"
+        app:srcCompat="@drawable/outline_currency_exchange"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_exchange_rate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/rate_1"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_exchange_rate"
+        app:layout_constraintStart_toEndOf="@+id/iv_exchange_rate"
+        app:layout_constraintTop_toTopOf="@+id/iv_exchange_rate" />
+
+
+    <TextView
+        android:id="@+id/tv_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zeroWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_rate_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_currency_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_exchange_rate_label" />
+
+
+    <TextView
+        android:id="@+id/tv_converted_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/zeroWhite"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/tv_exchange_rate"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_rate_label" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:alpha="0.2"
+        android:background="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/tv_exchange_rate_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_converted_amount"
+        app:layout_constraintWidth_percent="0.6" />
+
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/to"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_from"
+        app:layout_constraintTop_toBottomOf="@+id/tv_to_country" />
+
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/from"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_convert"
+        app:layout_constraintTop_toBottomOf="@+id/tv_country" />
+
+
+    <ImageView
+        android:id="@+id/iv_to_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/btn_convert"
+        app:layout_constraintTop_toBottomOf="@+id/view_line"
+        app:srcCompat="@drawable/outline_place"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/tv_to_country_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/country"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_to_country"
+        app:layout_constraintStart_toEndOf="@+id/iv_to_country"
+        app:layout_constraintTop_toTopOf="@+id/iv_to_country" />
+
+
+    <TextView
+        android:id="@+id/tv_to_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/zeroWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_to_country_label"
+        app:layout_constraintStart_toEndOf="@+id/tv_to_country_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_to_country_label" />
+
+
+    <ImageView
+        android:id="@+id/iv_to_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/iv_to_country"
+        app:layout_constraintTop_toBottomOf="@id/iv_to_country"
+        app:srcCompat="@drawable/outline_code"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_to_code_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/code"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_to_code"
+        app:layout_constraintStart_toEndOf="@+id/iv_to_code"
+        app:layout_constraintTop_toTopOf="@+id/iv_to_code" />
+
+
+    <TextView
+        android:id="@+id/tv_to_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zeroWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_to_code_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_to_country"
+        app:layout_constraintTop_toTopOf="@+id/tv_to_code_label" />
+
+
+    <ImageView
+        android:id="@+id/iv_to_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/iv_to_code"
+        app:layout_constraintTop_toBottomOf="@id/iv_to_code"
+        app:srcCompat="@drawable/outline_money_custom"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_to_currency_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/currency"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_to_currency"
+        app:layout_constraintStart_toEndOf="@+id/iv_to_currency"
+        app:layout_constraintTop_toTopOf="@+id/iv_to_currency" />
+
+
+    <TextView
+        android:id="@+id/tv_to_currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zeroWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_to_currency_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_to_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_to_currency_label" />
+
+
+    <ImageView
+        android:id="@+id/iv_to_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/iv_to_currency"
+        app:layout_constraintTop_toBottomOf="@id/iv_to_currency"
+        app:srcCompat="@drawable/outline_currency_exchange"
+        app:tint="@color/offWhite"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_to_exchange_rate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:text="@string/rate_1"
+        android:textColor="@color/offWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_to_exchange_rate"
+        app:layout_constraintStart_toEndOf="@+id/iv_to_exchange_rate"
+        app:layout_constraintTop_toTopOf="@+id/iv_to_exchange_rate" />
+
+
+    <TextView
+        android:id="@+id/tv_to_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zeroWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_to_exchange_rate_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_to_currency_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_to_exchange_rate_label" />
+
+
+    <TextView
+        android:id="@+id/tv_to_converted_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/zeroWhite"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/tv_to_exchange_rate"
+        app:layout_constraintTop_toBottomOf="@+id/tv_to_exchange_rate_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ahmed.bankapp.R
 import com.ahmed.bankapp.databinding.ActivityCurrencyExchangeBinding
 import com.ahmed.bankapp.ui.currency.CurrenciesActivity
+import com.ahmed.bankapp.ui.currency.CurrencyCalculatorActivity
 import com.ahmed.bankapp.ui.currency.SearchCurrencyActivity
 import com.ahmed.bankapp.ui.currency.UpdateRateActivity
 import com.ahmed.bankapp.util.click
@@ -35,6 +36,9 @@ class CurrencyExchangeActivity : AppCompatActivity() {
             }
             cvUpdateRate.click {
                 openActivity(UpdateRateActivity::class.java)
+            }
+            cvCurrencyCalculator.click {
+                openActivity(CurrencyCalculatorActivity::class.java)
             }
         }
     }

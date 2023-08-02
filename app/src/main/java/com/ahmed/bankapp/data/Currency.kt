@@ -63,8 +63,15 @@ data class Currency(
             // No Country has been found
             return getEmptyCurrency()
         }
-    }
 
+        fun convertToDollar(amount: Double, rate: Float): Double {
+            return amount / rate
+        }
+
+        fun convertFromDollar(amount: Double, rate: Float): Double {
+            return amount * rate
+        }
+    }
 
     fun updateRate(
         currencyCode: String,
@@ -88,7 +95,7 @@ data class Currency(
     }
 
 
-    fun isCurrencyExist(): Boolean{
+    fun isCurrencyExist(): Boolean {
         return currencyCode != ""
     }
 

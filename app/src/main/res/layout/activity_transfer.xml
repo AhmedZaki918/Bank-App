@@ -53,6 +53,11 @@
             app:layout_constraintTop_toBottomOf="@+id/et_to_account" />
 
 
+
+
+
+
+
         <TextView
             android:id="@+id/fullname_label"
             android:layout_width="wrap_content"
@@ -161,6 +166,10 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_balance"
             app:layout_constraintWidth_percent="0.6"
             tools:visibility="visible" />
+
+
+
+
 
 
         <TextView
@@ -284,6 +293,11 @@
             tools:visibility="visible" />
 
 
+
+
+
+
+
         <ImageView
             android:id="@+id/imageView18"
             android:layout_width="wrap_content"
@@ -310,6 +324,7 @@
             tools:ignore="ContentDescription"
             tools:visibility="visible" />
 
+
         <ImageView
             android:id="@+id/imageView20"
             android:layout_width="wrap_content"
@@ -322,6 +337,12 @@
             app:tint="@color/offWhite"
             tools:ignore="ContentDescription"
             tools:visibility="visible" />
+
+
+
+
+
+
 
         <ImageView
             android:id="@+id/imageView21"
