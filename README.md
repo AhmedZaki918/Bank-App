@@ -33,6 +33,8 @@ This app has been implemented with multiple activity for simplicity purpose only
 <img src="images/13-all currencies.jpg" width="250">
 <img src="images/14-search currency.jpg" width="250">
 <img src="images/15-update exchange rate.jpg" width="250">
+<img src="images/16-currency_cal.jpg" width="250">
+
 
 ## Functionality
 
