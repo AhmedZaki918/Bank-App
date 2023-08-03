@@ -63,14 +63,14 @@ data class Currency(
             // No Country has been found
             return getEmptyCurrency()
         }
+    }
 
-        fun convertToDollar(amount: Double, rate: Float): Double {
-            return amount / rate
-        }
+    fun convertToDollar(amount: Double): Double {
+        return amount / rate
+    }
 
-        fun convertFromDollar(amount: Double, rate: Float): Double {
-            return amount * rate
-        }
+    fun convertFromDollar(amount: Double): Double {
+        return amount * rate
     }
 
     fun updateRate(
@@ -82,7 +82,7 @@ data class Currency(
                 currencies[i].apply {
                     val item = Currency(
                         countryName,
-                        currencyCode,
+                        this.currencyCode,
                         currencyName,
                         rate
                     )

@@ -123,6 +123,7 @@
     <string name="from_currency">From currency</string>
     <string name="convert">Convert</string>
     <string name="to_currency">To currency</string>
+    <string name="clear">Clear</string>
 
 
 </resources>

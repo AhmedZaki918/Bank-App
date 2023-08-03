@@ -426,4 +426,16 @@
         app:layout_constraintStart_toStartOf="@+id/tv_to_exchange_rate"
         app:layout_constraintTop_toBottomOf="@+id/tv_to_exchange_rate_label" />
 
+
+    <Button
+        android:id="@+id/btn_clear"
+        style="@style/button"
+        android:visibility="invisible"
+        android:layout_marginBottom="32dp"
+        android:text="@string/clear"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

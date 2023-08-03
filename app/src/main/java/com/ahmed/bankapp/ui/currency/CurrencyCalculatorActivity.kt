@@ -12,6 +12,7 @@ import com.ahmed.bankapp.databinding.ActivityCurrencyCaluclatorBinding
 import com.ahmed.bankapp.util.click
 import com.ahmed.bankapp.util.drawScreenHeader
 import com.ahmed.bankapp.util.installSplash
+import com.ahmed.bankapp.util.openActivity
 import com.ahmed.bankapp.util.toast
 
 class CurrencyCalculatorActivity : AppCompatActivity() {
@@ -35,6 +36,12 @@ class CurrencyCalculatorActivity : AppCompatActivity() {
             btnConvert.click {
                 convertFromCurrency()
             }
+
+            btnClear.click {
+                // Restart the activity
+                finish()
+                openActivity(CurrencyCalculatorActivity::class.java)
+            }
         }
     }
 
@@ -52,6 +59,7 @@ class CurrencyCalculatorActivity : AppCompatActivity() {
                 etToCurrency.visibility = INVISIBLE
                 etAmount.visibility = INVISIBLE
                 btnConvert.visibility = INVISIBLE
+                btnClear.visibility = VISIBLE
                 sourceAmount = amount.toDouble()
 
                 if (currencyItemOne.currencyCode() != USD && currencyItemTwo.currencyCode() != USD) {
@@ -76,7 +84,7 @@ class CurrencyCalculatorActivity : AppCompatActivity() {
             tvCurrencyName.text = currency.currencyName()
             tvExchangeRate.text = currency.rate.toString()
 
-            dollarAmount = Currency.convertToDollar(amount, currency.rate)
+            dollarAmount = currency.convertToDollar(amount)
             val amount3digits = String.format(THREE_DIGITS, dollarAmount).toDouble()
 
             val convertedAmount = "$amount ${currency.currencyCode()} = $amount3digits $USD"
@@ -91,7 +99,7 @@ class CurrencyCalculatorActivity : AppCompatActivity() {
             tvToCurrencyName.text = currency.currencyName()
             tvToExchangeRate.text = currency.rate.toString()
 
-            val amount = Currency.convertFromDollar(dollarAmount, currency.rate)
+            val amount = currency.convertFromDollar(dollarAmount)
             val amount3digits = String.format(THREE_DIGITS, amount).toDouble()
 
             val convertedAmount =
