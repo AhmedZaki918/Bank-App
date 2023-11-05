@@ -114,7 +114,7 @@ This app has been implemented with multiple activity for simplicity purpose only
 ```html
 MIT Licence 
 
-Copyright (c) 2022 Ahmed Zaki
+Copyright (c) 2023 Ahmed Zaki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software
 and associated documentation files (the "Software"), to deal in the Software without restriction,
